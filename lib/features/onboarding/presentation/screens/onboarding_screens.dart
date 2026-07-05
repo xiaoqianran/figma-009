@@ -1,14 +1,7 @@
 import 'package:figma_009/shared/widgets/figma_placeholder_screen.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const FigmaPlaceholderScreen(figmaFrame: 'Splash screen');
-  }
-}
+export 'splash_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
