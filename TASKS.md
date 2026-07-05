@@ -58,9 +58,14 @@
 - [x] Recovery screen with phrase + name inputs
 - [x] Cancel / Add actions
 
-## Layer 5 — Upcoming
+## Layer 5 — Wallet (`task/008-wallet`) ✅
 
-- Wallet main tab
+- [x] WalletBalanceCard（余额 + Send/Receive/Buy）
+- [x] WalletTokenCell 代币列表行
+- [x] Wallet 主 Tab 页面
+- [x] Widget test
+
+## Layer 6 — Upcoming
 - Transaction flows
 - Token management
 - Settings + Notification
