@@ -65,7 +65,15 @@
 - [x] Wallet 主 Tab 页面
 - [x] Widget test
 
-## Layer 6 — Upcoming
-- Transaction flows
+## Layer 6 — Transactions (`task/009-transactions`) ✅
+
+- [x] Send + Send Detail screens
+- [x] Buy + Buy Detail screens
+- [x] Receive + Receive Detail screens
+- [x] TransactionAmountPanel + market/receive widgets
+- [x] Widget tests
+
+## Layer 7 — Upcoming
+- Transaction flows (Swap)
 - Token management
 - Settings + Notification

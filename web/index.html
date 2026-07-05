@@ -18,21 +18,117 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="AltCoin Wallet">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="figma_009">
+  <meta name="apple-mobile-web-app-title" content="Wallet">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>figma_009</title>
+  <title>Wallet</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+    }
+
+    #flutter-loading {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      color: #fff;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    #flutter-loading.error {
+      padding: 24px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    #flutter-loading.error a {
+      color: #6ee7d9;
+    }
+
+    #flutter-loading.error pre {
+      display: inline-block;
+      margin: 12px 0;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: #111;
+      color: #ddd;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .flutter-spinner {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 16px;
+      border: 3px solid #222;
+      border-top-color: #6ee7d9;
+      border-radius: 50%;
+      animation: flutter-spin 0.8s linear infinite;
+    }
+
+    @keyframes flutter-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
+  <div id="flutter-loading" aria-live="polite">
+    <div class="flutter-spinner" aria-hidden="true"></div>
+    <p>Loading Wallet…</p>
+  </div>
+
+  <script>
+    (function () {
+      var loading = document.getElementById('flutter-loading');
+
+      function removeLoading() {
+        if (loading && loading.parentNode) {
+          loading.parentNode.removeChild(loading);
+          loading = null;
+        }
+      }
+
+      function flutterMounted() {
+        return !!document.querySelector(
+          'flt-glass-pane, flutter-view, flt-scene-host, flt-semantics-host'
+        );
+      }
+
+      window.addEventListener('flutter-first-frame', removeLoading);
+
+      window.setTimeout(function () {
+        if (!loading || flutterMounted()) {
+          return;
+        }
+
+        loading.className = 'error';
+        loading.innerHTML =
+          '<p><strong>应用未能加载</strong></p>' +
+          '<p>请通过 HTTP 服务器访问构建产物，不要直接打开 HTML 文件，也不要从 <code>web/</code> 目录单独预览。</p>' +
+          '<pre>flutter build web\ncd build/web\npython -m http.server 8765</pre>' +
+          '<p>然后打开 <a href="http://localhost:8765/">http://localhost:8765/</a></p>' +
+          '<p>开发预览可使用：<code>flutter run -d web-server --web-port=8765</code></p>';
+      }, 25000);
+    })();
+  </script>
+
   <!--
     You can customize the "flutter_bootstrap.js" script.
     This is useful to provide a custom configuration to the Flutter loader
