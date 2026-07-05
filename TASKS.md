@@ -95,3 +95,10 @@
 - [x] Wallet 余额卡跳转 Scroll 列表
 - [x] App Shell 导航集成测试
 - [x] Web 字体运行时加载配置
+
+## Layer 10 — Assets (`task/013-assets`) ✅
+
+- [x] 从 Figma Symbols 导出底部 Tab 图标 PNG
+- [x] `WalletAssets` 常量 + `WalletBottomTabBar` 接入图片资源
+- [x] `WalletSlideConfirm` 松手回弹动画
+- [x] 修复 `wallet_slide_confirm` clamp 类型与测试 import

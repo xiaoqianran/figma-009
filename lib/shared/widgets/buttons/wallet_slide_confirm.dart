@@ -21,8 +21,18 @@ class WalletSlideConfirm extends StatefulWidget {
 }
 
 class _WalletSlideConfirmState extends State<WalletSlideConfirm> {
+  static const Duration _snapDuration = Duration(milliseconds: 220);
+
   double _dragOffset = 0;
   bool _confirmed = false;
+  bool _isDragging = false;
+
+  void _onDragStart() {
+    if (_confirmed) {
+      return;
+    }
+    setState(() => _isDragging = true);
+  }
 
   void _onDragUpdate(DragUpdateDetails details, double maxOffset) {
     if (_confirmed) {
@@ -39,13 +49,17 @@ class _WalletSlideConfirmState extends State<WalletSlideConfirm> {
     }
     if (_dragOffset >= maxOffset * 0.85) {
       setState(() {
+        _isDragging = false;
         _dragOffset = maxOffset;
         _confirmed = true;
       });
       widget.onConfirmed();
       return;
     }
-    setState(() => _dragOffset = 0);
+    setState(() {
+      _isDragging = false;
+      _dragOffset = 0;
+    });
   }
 
   @override
@@ -58,11 +72,10 @@ class _WalletSlideConfirmState extends State<WalletSlideConfirm> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final maxOffset =
-            (constraints.maxWidth - WalletSlideConfirm._thumbSize).clamp(
-              0.0,
-              double.infinity,
-            );
+        final double maxOffset =
+            (constraints.maxWidth - WalletSlideConfirm._thumbSize)
+                .clamp(0.0, double.infinity)
+                .toDouble();
         final progress = maxOffset == 0 ? 0.0 : _dragOffset / maxOffset;
 
         return SizedBox(
@@ -83,9 +96,12 @@ class _WalletSlideConfirmState extends State<WalletSlideConfirm> {
                   child: Text(widget.label, style: labelStyle),
                 ),
               ),
-              Positioned(
+              AnimatedPositioned(
+                duration: _isDragging ? Duration.zero : _snapDuration,
+                curve: Curves.easeOutCubic,
                 left: _dragOffset + 8,
                 child: GestureDetector(
+                  onHorizontalDragStart: (_) => _onDragStart(),
                   onHorizontalDragUpdate: (details) =>
                       _onDragUpdate(details, maxOffset),
                   onHorizontalDragEnd: (_) => _onDragEnd(maxOffset),

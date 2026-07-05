@@ -42,10 +42,10 @@ class WalletBottomTabBar extends StatelessWidget {
 }
 
 class WalletTabItem {
-  const WalletTabItem({required this.label, required this.icon});
+  const WalletTabItem({required this.label, required this.iconAsset});
 
   final String label;
-  final IconData icon;
+  final String iconAsset;
 }
 
 class _TabSlot extends StatelessWidget {
@@ -61,34 +61,41 @@ class _TabSlot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: DesignConstants.bottomTabItemWidth,
-      height: DesignConstants.bottomTabBarHeight,
-      child: Center(
-        child: SizedBox(
-          height: WalletBottomTabBar._activeTabHeight,
-          width: DesignConstants.bottomTabItemWidth,
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: onTap,
-              borderRadius: BorderRadius.circular(
-                WalletBottomTabBar._activeCornerRadius,
-              ),
-              child: Ink(
-                decoration: isActive
-                    ? BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          WalletBottomTabBar._activeCornerRadius,
-                        ),
-                        border: Border.all(color: AppColors.strokeDark),
-                      )
-                    : null,
-                child: Center(
-                  child: Icon(
-                    item.icon,
-                    size: DesignConstants.iconSize32,
-                    color: AppColors.white,
+    return Semantics(
+      button: true,
+      label: item.label,
+      selected: isActive,
+      child: SizedBox(
+        key: ValueKey('tab-${item.label}'),
+        width: DesignConstants.bottomTabItemWidth,
+        height: DesignConstants.bottomTabBarHeight,
+        child: Center(
+          child: SizedBox(
+            height: WalletBottomTabBar._activeTabHeight,
+            width: DesignConstants.bottomTabItemWidth,
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: onTap,
+                borderRadius: BorderRadius.circular(
+                  WalletBottomTabBar._activeCornerRadius,
+                ),
+                child: Ink(
+                  decoration: isActive
+                      ? BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                            WalletBottomTabBar._activeCornerRadius,
+                          ),
+                          border: Border.all(color: AppColors.strokeDark),
+                        )
+                      : null,
+                  child: Center(
+                    child: Image.asset(
+                      item.iconAsset,
+                      width: DesignConstants.iconSize32,
+                      height: DesignConstants.iconSize32,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),

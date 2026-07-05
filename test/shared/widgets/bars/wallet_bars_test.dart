@@ -1,3 +1,4 @@
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_bottom_tab_bar.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -24,14 +25,14 @@ void main() {
             selectedIndex: selected,
             onTabSelected: (index) => selected = index,
             items: const [
-              WalletTabItem(label: 'Wallet', icon: Icons.wallet),
-              WalletTabItem(label: 'Swap', icon: Icons.swap_horiz),
+              WalletTabItem(label: 'Wallet', iconAsset: WalletAssets.tabWallet),
+              WalletTabItem(label: 'Swap', iconAsset: WalletAssets.tabSwap),
             ],
           ),
         ),
       );
 
-      await tester.tap(find.byIcon(Icons.swap_horiz));
+      await tester.tap(find.byKey(const ValueKey('tab-Swap')));
       await tester.pump();
       expect(selected, 1);
     });

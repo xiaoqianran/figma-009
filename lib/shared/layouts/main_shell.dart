@@ -1,3 +1,4 @@
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_bottom_tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -9,10 +10,13 @@ class MainShell extends StatelessWidget {
   final StatefulNavigationShell navigationShell;
 
   static const _tabs = <WalletTabItem>[
-    WalletTabItem(label: 'Wallet', icon: Icons.account_balance_wallet_outlined),
-    WalletTabItem(label: 'Swap', icon: Icons.swap_horiz),
-    WalletTabItem(label: 'Notification', icon: Icons.notifications_outlined),
-    WalletTabItem(label: 'Settings', icon: Icons.settings_outlined),
+    WalletTabItem(label: 'Wallet', iconAsset: WalletAssets.tabWallet),
+    WalletTabItem(label: 'Swap', iconAsset: WalletAssets.tabSwap),
+    WalletTabItem(
+      label: 'Notification',
+      iconAsset: WalletAssets.tabNotification,
+    ),
+    WalletTabItem(label: 'Settings', iconAsset: WalletAssets.tabSettings),
   ];
 
   @override

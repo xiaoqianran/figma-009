@@ -14,10 +14,7 @@ void main() {
     final router = createAppRouter();
 
     await tester.pumpWidget(
-      MaterialApp.router(
-        theme: AppTheme.dark(),
-        routerConfig: router,
-      ),
+      MaterialApp.router(theme: AppTheme.dark(), routerConfig: router),
     );
 
     router.go(AppRoutes.wallet);
@@ -46,28 +43,25 @@ void main() {
     final router = createAppRouter();
 
     await tester.pumpWidget(
-      MaterialApp.router(
-        theme: AppTheme.dark(),
-        routerConfig: router,
-      ),
+      MaterialApp.router(theme: AppTheme.dark(), routerConfig: router),
     );
 
     router.go(AppRoutes.wallet);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.byIcon(Icons.swap_horiz));
+    await tester.tap(find.byKey(const ValueKey('tab-Swap')));
     await tester.pumpAndSettle();
     expect(find.text('You Send'), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.notifications_outlined));
+    await tester.tap(find.byKey(const ValueKey('tab-Notification')));
     await tester.pumpAndSettle();
     expect(find.text('Notification'), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.settings_outlined));
+    await tester.tap(find.byKey(const ValueKey('tab-Settings')));
     await tester.pumpAndSettle();
     expect(find.text('Settings'), findsOneWidget);
 
-    await tester.tap(find.byIcon(Icons.account_balance_wallet_outlined));
+    await tester.tap(find.byKey(const ValueKey('tab-Wallet')));
     await tester.pumpAndSettle();
     expect(find.text('My Wallet'), findsOneWidget);
   });
