@@ -7,7 +7,7 @@ Run from project root (`flutter_009`):
 ```bash
 dart format lib test
 flutter analyze          # must report: No issues found!
-flutter test             # 36 tests
+flutter test             # 41 tests
 flutter test test/features/wallet/wallet_screen_test.dart   # single file
 ```
 
@@ -25,13 +25,15 @@ void main() {
 
 Web production enables runtime fetching in `lib/main.dart` (`kIsWeb` only).
 
-## Inventory (36 tests / 15 files)
+## Inventory (41 tests / 17 files)
 
 | File | Tests | Focus |
 |------|-------|-------|
 | `test/widget_test.dart` | 1 | App boots, splash gradient title |
 | `test/app_shell_navigation_test.dart` | 2 | Shell `router.go` + tab tap navigation |
 | `test/core/theme/app_colors_test.dart` | 2 | Gradient / color tokens |
+| `test/core/theme/app_typography_test.dart` | 3 | Clash Display + Poppins family |
+| `test/shared/widgets/buttons/wallet_passcode_key_test.dart` | 2 | Passcode keypad render + tap |
 | `test/shared/widgets/buttons/wallet_buttons_test.dart` | 3 | Primary, secondary, circle buttons |
 | `test/shared/widgets/buttons/wallet_slide_confirm_test.dart` | 2 | Label, full drag confirm |
 | `test/shared/widgets/bars/wallet_bars_test.dart` | 2 | Tab bar tap, nav bar title |

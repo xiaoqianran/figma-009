@@ -13,11 +13,13 @@ class WalletListMenuCell extends StatelessWidget {
     super.key,
     this.subtitle,
     this.iconAsset,
+    this.trailing,
   });
 
   final String title;
   final String? subtitle;
   final String? iconAsset;
+  final Widget? trailing;
   final VoidCallback onTap;
 
   @override
@@ -55,11 +57,12 @@ class WalletListMenuCell extends StatelessWidget {
                 ],
               ),
             ),
-            const WalletAssetIcon(
-              WalletAssets.iconArrow,
-              size: DesignConstants.iconSize24,
-              color: AppColors.gray,
-            ),
+            trailing ??
+                const WalletAssetIcon(
+                  WalletAssets.iconArrow,
+                  size: DesignConstants.iconSize24,
+                  color: AppColors.gray,
+                ),
           ],
         ),
       ),

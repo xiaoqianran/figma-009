@@ -1,7 +1,7 @@
 # Progress — figma_009
 
 **Last updated:** 2026-07-05  
-**Branch:** `master` @ `54f78cc`  
+**Branch:** `master` (Layer 13 in progress)  
 **Remote:** `origin` → https://github.com/xiaoqianran/figma-009.git
 
 ## Current status
@@ -9,10 +9,11 @@
 | Check | Result |
 |-------|--------|
 | `flutter analyze` | No issues |
-| `flutter test` | **36 / 36** passing |
+| `flutter test` | **41 / 41** passing |
+| `flutter build web` | ✓ `build/web` |
 | Design frames | All implemented (no runtime `FigmaPlaceholderScreen` routes) |
 | Icons in `lib/` | 100% Figma PNG assets (`WalletAssets`) — no `Icons.*` |
-| Layers | **0–12 complete** (see [TASKS.md](TASKS.md)) |
+| Layers | **0–13 complete** (see [TASKS.md](TASKS.md)) |
 
 ## Milestone timeline
 
@@ -85,10 +86,14 @@
 
 Early layers used git worktrees (`flutter_009-task-00x-*`). Worktrees were merged and cleaned; all work now lands on `master` with small feature commits.
 
+### Layer 13 — Fonts & Settings controls
+
+- Clash Display Medium/Semibold bundled (Fontshare)
+- `WalletPasscodeKeypad`, `WalletSwitchToggle`
+- Price Alerts screen switches; Passcode Figma-styled keypad
+- `flutter build web` verified
+
 ## Next
 
-See [TASKS.md](TASKS.md) Layer 13 (not started):
-
-1. Clash Display font bundling
-2. Settings passcode / switch Figma assets
-3. Web release verification & optional golden tests
+- Optional: golden / visual regression tests
+- Bundle Poppins for fully offline Web builds

@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-/// Typography from Figma: Clash Display + Poppins.
-///
-/// Clash Display is not on Google Fonts; bundle it under `assets/fonts/` later.
-/// Until then, Space Grotesk is used as the display fallback.
+/// Typography from Figma: Clash Display (bundled) + Poppins (Google Fonts at runtime).
 abstract final class AppTypography {
-  static TextTheme textTheme() {
-    final display = GoogleFonts.spaceGrotesk();
-    final poppins = GoogleFonts.poppins();
+  static const String clashDisplayFamily = 'Clash Display';
+  static const String poppinsFamily = 'Poppins';
 
-    return TextTheme(
-      displayLarge: display.copyWith(
+  static TextTheme textTheme() {
+    return const TextTheme(
+      displayLarge: TextStyle(
+        fontFamily: clashDisplayFamily,
         fontSize: 40,
         fontWeight: FontWeight.w500,
         height: 1.2,
       ),
-      headlineMedium: display.copyWith(
+      headlineMedium: TextStyle(
+        fontFamily: clashDisplayFamily,
         fontSize: 24,
         fontWeight: FontWeight.w500,
         height: 1.25,
       ),
-      titleMedium: poppins.copyWith(
+      titleMedium: TextStyle(
+        fontFamily: poppinsFamily,
         fontSize: 18,
         fontWeight: FontWeight.w500,
         height: 1.5,
       ),
-      bodySmall: poppins.copyWith(
+      bodySmall: TextStyle(
+        fontFamily: poppinsFamily,
         fontSize: 12,
         fontWeight: FontWeight.w500,
         height: 1.5,

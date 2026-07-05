@@ -63,6 +63,14 @@ flutter:
     - assets/images/onboarding_hero.png
     - assets/icons/
 
+  fonts:
+    - family: Clash Display
+      fonts:
+        - asset: assets/fonts/ClashDisplay-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/ClashDisplay-Semibold.ttf
+          weight: 600
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

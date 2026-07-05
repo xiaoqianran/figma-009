@@ -17,6 +17,9 @@ abstract final class WalletAssets {
   static const String iconArrow = 'assets/icons/icon_arrow.png';
   static const String iconSwapVertical = 'assets/icons/icon_swap_vertical.png';
   static const String iconCheck = 'assets/icons/icon_check.png';
+  static const String passcodeBack = 'assets/icons/passcode_back.png';
+  static const String switchOn = 'assets/icons/switch_on.png';
+  static const String switchOff = 'assets/icons/switch_off.png';
 
   static const String setLock = 'assets/icons/set_lock.png';
   static const String setNoti = 'assets/icons/set_noti.png';

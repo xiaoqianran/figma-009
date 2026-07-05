@@ -27,12 +27,12 @@ Or: `flutter run -d web-server --web-port=8765`
 | Font | Status |
 |------|--------|
 | **Poppins** | Loaded via `google_fonts`; works on Web when `main.dart` sets `allowRuntimeFetching = true` |
-| **Clash Display** | Figma primary display font — **not** on Google Fonts |
-| **Fallback** | `AppTypography` uses Space Grotesk for display styles until Clash is bundled |
+| **Clash Display** | Bundled in `assets/fonts/` (Medium 500, Semibold 600) — [Fontshare FFL](https://www.fontshare.com/fonts/clash-display) |
+| **Poppins** | `fontFamily: 'Poppins'` in theme; loaded via `google_fonts` at runtime on Web (`main.dart`) |
 
 **Tests:** Always `GoogleFonts.config.allowRuntimeFetching = false` in `test/`.
 
-**To bundle Clash Display:** Download from [Fontshare](https://www.fontshare.com/fonts/clash-display), add TTFs under `assets/fonts/`, register in `pubspec.yaml`, update `AppTypography`.
+License file: `assets/fonts/ClashDisplay-FFL.txt`. Do not remove when redistributing fonts.
 
 ## Icons & assets
 

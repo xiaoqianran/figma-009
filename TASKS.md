@@ -117,9 +117,10 @@
 - [x] Swap 切换、Buy Detail、趋势箭头、Slide 滑块、Onboarding 按钮
 - [x] `lib/` 内 Material Icons 全部替换为 Figma 资源
 
-## Layer 13 — Fonts & QA (`task/016-fonts`) — planned
+## Layer 13 — Fonts & QA (`task/016-fonts`) ✅
 
-- [ ] 内嵌 Clash Display（`assets/fonts/` + `pubspec.yaml`）
-- [ ] Settings Passcode / Switch 等 Symbols 组件素材
-- [ ] `flutter build web` 发布验证文档化
-- [ ] 可选：关键页面 golden test
+- [x] 内嵌 Clash Display Medium/Semibold（Fontshare FFL）
+- [x] `WalletPasscodeKeypad` + Passcode Back 图标
+- [x] `WalletSwitchToggle` + Price Alerts 开关
+- [x] `flutter build web` 验证通过
+- [x] 字体与 Passcode 组件测试（41 tests）
