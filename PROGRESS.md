@@ -1,7 +1,7 @@
 # Progress — figma_009
 
 **Last updated:** 2026-07-05  
-**Branch:** `master` (Layer 14 complete)  
+**Branch:** `master` (Layer 15 complete)  
 **Remote:** `origin` → https://github.com/xiaoqianran/figma-009.git
 
 ## Current status
@@ -9,11 +9,11 @@
 | Check | Result |
 |-------|--------|
 | `flutter analyze` | No issues |
-| `flutter test` | **41 / 41** passing |
+| `flutter test` | **46 / 46** passing |
 | `flutter build web` | ✓ `build/web` |
 | Design frames | All implemented (no runtime `FigmaPlaceholderScreen` routes) |
 | Icons in `lib/` | 100% Figma PNG assets (`WalletAssets`) — no `Icons.*` |
-| Layers | **0–14 complete** (see [TASKS.md](TASKS.md)) |
+| Layers | **0–15 complete** (see [TASKS.md](TASKS.md)) |
 
 ## Milestone timeline
 
@@ -73,6 +73,7 @@
 
 | Commit | Summary |
 |--------|---------|
+| `0fe7f12` | 内嵌 Poppins 字体，移除 google_fonts |
 | `dc49c23` | 内嵌 Clash Display 字体与 Passcode/Switch 控件 |
 | `54f78cc` | Settings 菜单与剩余页面接入 Figma 图标 |
 | `689357e` | 导航与代币图标资源 |
@@ -99,7 +100,12 @@ Early layers used git worktrees (`flutter_009-task-00x-*`). Worktrees were merge
 - Poppins Medium bundled (Google OFL)
 - Removed `google_fonts` dependency — fully offline Web builds
 
+### Layer 15 — Passcode flow
+
+- 6-digit PIN dots + input card from Figma frame `0:488`
+- Keypad fills dots; back removes digit; Slide to Save pops when complete
+
 ## Next
 
 - Optional: golden / visual regression tests
-- Optional: Passcode keypad PIN state + navigation wiring
+- Optional: persist passcode mock state across Settings security flow

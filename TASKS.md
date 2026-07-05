@@ -130,3 +130,10 @@
 - [x] 内嵌 Poppins Medium（Google OFL）
 - [x] 移除 `google_fonts` 依赖与 Web 运行时拉取
 - [x] 清理测试中的 `GoogleFonts.config` 样板代码
+
+## Layer 15 — Passcode flow (`task/018-passcode`) ✅
+
+- [x] `WalletPasscodeIndicator` — 6 位圆点指示器（Figma 0:494）
+- [x] `WalletPasscodeInputCard` — 「Enter your passcode」输入卡
+- [x] `SettingsPasscodeScreen` PIN 状态 + 退格 + Slide to Save
+- [x] Passcode 屏幕与指示器测试（46 tests）
