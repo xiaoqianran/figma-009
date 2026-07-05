@@ -20,6 +20,8 @@ cd build/web && python -m http.server 8765
 
 Or: `flutter run -d web-server --web-port=8765`
 
+**GitHub Pages:** CI builds with `--base-href "/figma-009/"` and copies `index.html` → `404.html` for SPA routing. Live: https://xiaoqianran.github.io/figma-009/
+
 `web/index.html` includes a loading spinner and 25s timeout message with these instructions.
 
 ## Fonts

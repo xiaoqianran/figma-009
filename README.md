@@ -18,7 +18,7 @@ flutter run                    # mobile / desktop
 flutter run -d chrome          # dev (Flutter-owned Chrome window)
 ```
 
-### Web preview (recommended)
+### Web preview (local)
 
 Do **not** open `web/index.html` directly (`file://`). Serve the **built** output:
 
@@ -28,6 +28,14 @@ cd build/web
 python -m http.server 8765
 # → http://localhost:8765/
 ```
+
+### GitHub Pages (production)
+
+Push to `master` triggers [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
+
+**Live URL:** https://xiaoqianran.github.io/figma-009/
+
+Repo **Settings → Pages → Build and deployment → Source:** GitHub Actions (first-time setup).
 
 Or use the web dev server:
 
