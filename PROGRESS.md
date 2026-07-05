@@ -12,12 +12,19 @@
 - `flutter analyze` — no issues
 - `flutter test` — 1 test passing
 
-### In progress
+### Layer 1–3 complete (worktree workflow)
 
-- Layer 1: theme tokens from Figma MCP
-- Layer 2: shared Button + Bar widgets
-- Layer 3: Splash screen
+| Task | Branch | Commit |
+|---|---|---|
+| Theme tokens | `task/001-theme` | feat: 从 Figma 完善主题色与间距设计 tokens |
+| Buttons | `task/002-buttons` | feat: 新增 Wallet 按钮共享组件 |
+| Bars | `task/003-bars` | feat: 新增底部 Tab 栏与顶部导航栏组件 |
+| Splash | `task/004-splash` | feat: 实现 Splash 启动页与渐变标题 |
+
+- `flutter analyze` — no issues
+- `flutter test` — 12 tests passing
 
 ### Next
 
-- Onboarding screens (Splash → Onboarding → Seed Phrase → Recovery)
+- Onboarding screens (Onboarding → Seed Phrase → Recovery)
+- Wallet main tab UI

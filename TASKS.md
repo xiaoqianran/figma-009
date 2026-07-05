@@ -7,36 +7,36 @@
 - [x] Base theme (colors, typography, ThemeExtension)
 - [x] Project documentation
 
-## Layer 1 — Design tokens (`task/001-theme`)
+## Layer 1 — Design tokens (`task/001-theme`) ✅
 
-- [ ] Figma gradient paint styles → `AppColors`
-- [ ] Spacing / radius tokens → `DesignConstants`
-- [ ] Theme tests
+- [x] Figma gradient paint styles → `AppColors`
+- [x] Spacing / radius tokens → `DesignConstants`
+- [x] Theme tests
 
-## Layer 2 — Shared widgets
+## Layer 2 — Shared widgets ✅
 
 ### `task/002-buttons`
 
-- [ ] `WalletPrimaryButton` (Button / Primary)
-- [ ] `WalletSecondaryButton` (Button / Secondary)
-- [ ] `WalletCircleButton` (Button / Circle)
-- [ ] Widget tests
+- [x] `WalletPrimaryButton` (Button / Primary)
+- [x] `WalletSecondaryButton` (Button / Secondary)
+- [x] `WalletCircleButton` (Button / Circle)
+- [x] Widget tests
 
 ### `task/003-bars`
 
-- [ ] `WalletBottomTabBar` (Bar / Bottom / Tab Bar)
-- [ ] `WalletNavigationBar` (Bar / Navigation)
-- [ ] Update `MainShell` to use custom tab bar
-- [ ] Widget tests
+- [x] `WalletBottomTabBar` (Bar / Bottom / Tab Bar)
+- [x] `WalletNavigationBar` (Bar / Navigation)
+- [x] Update `MainShell` to use custom tab bar
+- [x] Widget tests
 
 ## Layer 3 — Screens
 
-### `task/004-splash`
+### `task/004-splash` ✅
 
-- [ ] Splash screen UI from Figma frame `0:68`
-- [ ] Gradient title text "AltCoin\nWallet"
-- [ ] Auto-navigate to onboarding (timer)
-- [ ] Widget test update
+- [x] Splash screen UI from Figma frame `0:68`
+- [x] Gradient title text "AltCoin\nWallet"
+- [x] Auto-navigate to onboarding (timer)
+- [x] Widget test update
 
 ## Layer 4 — Upcoming (not started)
 
