@@ -1,6 +1,8 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/router/app_routes.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:figma_009/features/wallet/data/mock_wallet_tokens.dart';
 import 'package:figma_009/shared/widgets/buttons/wallet_circle_button.dart';
 import 'package:flutter/material.dart';
@@ -52,19 +54,28 @@ class WalletTokenBalanceCard extends StatelessWidget {
             children: [
               _QuickAction(
                 label: 'Send',
-                icon: const Icon(Icons.arrow_upward, color: AppColors.black),
+                icon: const WalletAssetIcon(
+                  WalletAssets.iconSend,
+                  color: AppColors.black,
+                ),
                 onPressed: () => context.push(AppRoutes.send, extra: token),
                 labelStyle: actionStyle,
               ),
               _QuickAction(
                 label: 'Receive',
-                icon: const Icon(Icons.arrow_downward, color: AppColors.black),
+                icon: const WalletAssetIcon(
+                  WalletAssets.iconDown,
+                  color: AppColors.black,
+                ),
                 onPressed: () => context.push(AppRoutes.receive),
                 labelStyle: actionStyle,
               ),
               _QuickAction(
                 label: 'Buy',
-                icon: const Icon(Icons.add, color: AppColors.black),
+                icon: const WalletAssetIcon(
+                  WalletAssets.iconBuy,
+                  color: AppColors.black,
+                ),
                 onPressed: () => context.push(AppRoutes.buy, extra: token),
                 labelStyle: actionStyle,
               ),

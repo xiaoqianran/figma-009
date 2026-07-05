@@ -1,5 +1,5 @@
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/features/wallet/data/mock_wallet_tokens.dart';
-import 'package:flutter/material.dart';
 
 /// Market listing tokens for Buy flow (Figma frame `Buy` 0:196).
 abstract final class MockMarketTokens {
@@ -12,7 +12,7 @@ abstract final class MockMarketTokens {
       fiatValue: r'$ 15,950.26',
       changePercent: '+1.68%',
       isUp: true,
-      iconColor: Color(0xFFB0C7FF),
+      iconAsset: WalletAssets.coinBitcoin,
     ),
     WalletToken(
       id: 'eth',
@@ -22,7 +22,7 @@ abstract final class MockMarketTokens {
       fiatValue: r'$ 5,260.04',
       changePercent: '+3.48%',
       isUp: true,
-      iconColor: Color(0xFFFFBABA),
+      iconAsset: WalletAssets.coinEther,
     ),
     WalletToken(
       id: 'dah',
@@ -32,7 +32,7 @@ abstract final class MockMarketTokens {
       fiatValue: r'$ 1,540.50',
       changePercent: '+4.67%',
       isUp: true,
-      iconColor: Color(0xFFB0C7FF),
+      iconAsset: WalletAssets.coinDash,
     ),
     WalletToken(
       id: 'pec',
@@ -42,7 +42,7 @@ abstract final class MockMarketTokens {
       fiatValue: r'$ 320.00',
       changePercent: '-5.55%',
       isUp: false,
-      iconColor: Color(0xFFB8FF00),
+      iconAsset: WalletAssets.coinPeercoin,
     ),
     WalletToken(
       id: 'wav',
@@ -52,7 +52,7 @@ abstract final class MockMarketTokens {
       fiatValue: r'$ 220.00',
       changePercent: '-2.66%',
       isUp: false,
-      iconColor: Color(0xFFB0C7FF),
+      iconAsset: WalletAssets.coinWave,
     ),
   ];
 }

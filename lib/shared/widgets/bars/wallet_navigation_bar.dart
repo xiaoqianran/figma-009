@@ -1,6 +1,8 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/shared/widgets/buttons/wallet_icon_button.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:flutter/material.dart';
 
 /// Figma `Bar / Navigation / Label + 2 icon` — top bar with title and side actions.
@@ -53,14 +55,15 @@ class WalletNavigationBarActions {
 
   static Widget back({required VoidCallback onPressed}) {
     return WalletIconButton(
-      icon: const Icon(Icons.arrow_back, color: AppColors.white),
+      key: const ValueKey('nav-back'),
+      icon: const WalletAssetIcon(WalletAssets.iconBack),
       onPressed: onPressed,
     );
   }
 
   static Widget search({required VoidCallback onPressed}) {
     return WalletIconButton(
-      icon: const Icon(Icons.search, color: AppColors.white),
+      icon: const WalletAssetIcon(WalletAssets.iconSearch),
       onPressed: onPressed,
     );
   }

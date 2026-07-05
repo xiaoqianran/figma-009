@@ -1,4 +1,5 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/router/app_routes.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/swap_token_card.dart';
@@ -17,7 +18,7 @@ class SettingsInputScreen extends StatelessWidget {
     amount: '0.045',
     balance: 'Balance : 0.955 BTC',
     rate: r'1 BTC = $34,377.08',
-    iconColor: Color(0xFFB0C7FF),
+    iconAsset: WalletAssets.coinBitcoin,
   );
 
   static const _receiveToken = SwapTokenData(
@@ -26,7 +27,7 @@ class SettingsInputScreen extends StatelessWidget {
     amount: '52,584',
     balance: 'Balance : 52,684 XRP',
     rate: r'1 XRP = $0.652',
-    iconColor: Color(0xFFB8FF00),
+    iconAsset: WalletAssets.coinRipple,
   );
 
   @override

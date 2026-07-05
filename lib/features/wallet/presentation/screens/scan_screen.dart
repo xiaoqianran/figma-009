@@ -1,5 +1,7 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/wallet_receive_profile_card.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
 import 'package:figma_009/shared/widgets/other/wallet_section_title.dart';
@@ -80,10 +82,10 @@ class ScanScreen extends StatelessWidget {
                               ),
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            child: const Icon(
-                              Icons.qr_code_scanner,
+                            child: const WalletAssetIcon(
+                              WalletAssets.iconScan,
+                              key: ValueKey('scan-icon'),
                               size: 80,
-                              color: AppColors.white,
                             ),
                           ),
                           const SizedBox(height: DesignConstants.spacing16),

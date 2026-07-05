@@ -102,3 +102,10 @@
 - [x] `WalletAssets` 常量 + `WalletBottomTabBar` 接入图片资源
 - [x] `WalletSlideConfirm` 松手回弹动画
 - [x] 修复 `wallet_slide_confirm` clamp 类型与测试 import
+
+## Layer 11 — Icons (`task/014-icons`) ✅
+
+- [x] 导出导航/操作图标（Back、Search、Send、Down、Buy、Scan）
+- [x] 导出 56px 代币图标（BTC/ETH/DASH/WAV/PEC/BNB/XRP）
+- [x] `WalletAssetIcon` + `WalletCoinIcon` 共享组件
+- [x] 导航栏、余额卡、代币列表、Swap 接入 Figma 图标

@@ -53,12 +53,12 @@ void main() {
     await tester.pumpWidget(MaterialApp.router(routerConfig: router));
     await tester.pump();
 
-    expect(find.byIcon(Icons.arrow_back), findsNothing);
+    expect(find.byKey(const ValueKey('nav-back')), findsNothing);
 
     await tester.tap(find.byType(WalletBalanceCard));
     await tester.pumpAndSettle();
 
-    expect(find.byIcon(Icons.arrow_back), findsOneWidget);
+    expect(find.byKey(const ValueKey('nav-back')), findsOneWidget);
     expect(find.byType(WalletScrollScreen), findsOneWidget);
   });
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 
 class WalletToken {
   const WalletToken({
@@ -9,7 +9,7 @@ class WalletToken {
     required this.fiatValue,
     required this.changePercent,
     required this.isUp,
-    required this.iconColor,
+    required this.iconAsset,
   });
 
   final String id;
@@ -19,7 +19,7 @@ class WalletToken {
   final String fiatValue;
   final String changePercent;
   final bool isUp;
-  final Color iconColor;
+  final String iconAsset;
 }
 
 abstract final class MockWalletTokens {
@@ -29,55 +29,55 @@ abstract final class MockWalletTokens {
       name: 'Bitcoin',
       symbol: 'BTC',
       amount: '0.465 BTC',
-      fiatValue: '\$ 15,950.26',
+      fiatValue: r'$ 15,950.26',
       changePercent: '+1.68%',
       isUp: true,
-      iconColor: Color(0xFFB0C7FF),
+      iconAsset: WalletAssets.coinBitcoin,
     ),
     WalletToken(
       id: 'eth',
       name: 'Ethereum',
       symbol: 'ETH',
       amount: '2.45 ETH',
-      fiatValue: '\$ 5,260.04',
+      fiatValue: r'$ 5,260.04',
       changePercent: '+3.48%',
       isUp: true,
-      iconColor: Color(0xFFFFBABA),
+      iconAsset: WalletAssets.coinEther,
     ),
     WalletToken(
       id: 'pec',
       name: 'Peercoin',
       symbol: 'PEC',
       amount: '1259 PEC',
-      fiatValue: '\$ 320.00',
+      fiatValue: r'$ 320.00',
       changePercent: '-5.55%',
       isUp: false,
-      iconColor: Color(0xFFB8FF00),
+      iconAsset: WalletAssets.coinPeercoin,
     ),
     WalletToken(
       id: 'dah',
       name: 'Dash',
       symbol: 'DAH',
       amount: '112 DAH',
-      fiatValue: '\$ 1,540.50',
+      fiatValue: r'$ 1,540.50',
       changePercent: '+4.67%',
       isUp: true,
-      iconColor: Color(0xFFB0C7FF),
+      iconAsset: WalletAssets.coinDash,
     ),
     WalletToken(
       id: 'wav',
       name: 'Wave',
       symbol: 'WAV',
       amount: '4015 WAV',
-      fiatValue: '\$ 220.00',
+      fiatValue: r'$ 220.00',
       changePercent: '-2.66%',
       isUp: false,
-      iconColor: Color(0xFFB0C7FF),
+      iconAsset: WalletAssets.coinWave,
     ),
   ];
 
   static const String walletLabel = 'Wallet Etherium';
-  static const String totalBalance = '\$ 24,306';
+  static const String totalBalance = r'$ 24,306';
 
   static WalletToken? byId(String id) {
     for (final token in items) {

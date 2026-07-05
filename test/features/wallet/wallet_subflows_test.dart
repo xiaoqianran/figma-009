@@ -66,6 +66,6 @@ void main() {
 
     expect(find.text('Scan'), findsOneWidget);
     expect(find.text('Freddy'), findsOneWidget);
-    expect(find.byIcon(Icons.qr_code_scanner), findsOneWidget);
+    expect(find.byKey(const ValueKey('scan-icon')), findsOneWidget);
   });
 }

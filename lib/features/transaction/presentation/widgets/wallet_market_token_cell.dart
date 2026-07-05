@@ -1,6 +1,7 @@
 import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/features/wallet/data/mock_wallet_tokens.dart';
+import 'package:figma_009/shared/widgets/other/wallet_coin_icon.dart';
 import 'package:flutter/material.dart';
 
 /// Figma Buy list cell — ticker symbol on the second row instead of balance.
@@ -39,7 +40,7 @@ class WalletMarketTokenCell extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _CoinIcon(color: token.iconColor, symbol: token.symbol),
+                WalletCoinIcon(asset: token.iconAsset),
                 const SizedBox(width: DesignConstants.spacing12),
                 Expanded(
                   child: Column(
@@ -76,34 +77,6 @@ class WalletMarketTokenCell extends StatelessWidget {
             const SizedBox(height: DesignConstants.spacing8),
             const Divider(height: 1, color: Color(0xFF1E1E1E)),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class _CoinIcon extends StatelessWidget {
-  const _CoinIcon({required this.color, required this.symbol});
-
-  final Color color;
-  final String symbol;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: DesignConstants.iconSize56,
-      height: DesignConstants.iconSize56,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(DesignConstants.spacing16),
-      ),
-      alignment: Alignment.center,
-      child: Text(
-        symbol[0],
-        style: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
-          color: AppColors.black,
         ),
       ),
     );

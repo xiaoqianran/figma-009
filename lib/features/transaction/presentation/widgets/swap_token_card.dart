@@ -1,5 +1,6 @@
 import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_coin_icon.dart';
 import 'package:flutter/material.dart';
 
 class SwapTokenData {
@@ -9,7 +10,7 @@ class SwapTokenData {
     required this.amount,
     required this.balance,
     required this.rate,
-    required this.iconColor,
+    required this.iconAsset,
   });
 
   final String label;
@@ -17,7 +18,7 @@ class SwapTokenData {
   final String amount;
   final String balance;
   final String rate;
-  final Color iconColor;
+  final String iconAsset;
 }
 
 /// Figma Swap card — You Send / You Get token panel.
@@ -63,22 +64,7 @@ class SwapTokenCard extends StatelessWidget {
           const SizedBox(height: DesignConstants.spacing12),
           Row(
             children: [
-              Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: token.iconColor,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                alignment: Alignment.center,
-                child: Text(
-                  token.name[0],
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.black,
-                  ),
-                ),
-              ),
+              WalletCoinIcon(asset: token.iconAsset, size: 40),
               const SizedBox(width: DesignConstants.spacing12),
               Expanded(
                 child: Column(

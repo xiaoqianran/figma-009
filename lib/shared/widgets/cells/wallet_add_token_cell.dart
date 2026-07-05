@@ -1,17 +1,18 @@
 import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_coin_icon.dart';
 import 'package:flutter/material.dart';
 
 class AddTokenItem {
   const AddTokenItem({
     required this.name,
     required this.symbol,
-    required this.iconColor,
+    required this.iconAsset,
   });
 
   final String name;
   final String symbol;
-  final Color iconColor;
+  final String iconAsset;
 }
 
 /// Figma Add Token list row.
@@ -44,23 +45,7 @@ class WalletAddTokenCell extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
-              width: DesignConstants.iconSize56,
-              height: DesignConstants.iconSize56,
-              decoration: BoxDecoration(
-                color: token.iconColor,
-                borderRadius: BorderRadius.circular(DesignConstants.spacing16),
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                token.symbol[0],
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.black,
-                ),
-              ),
-            ),
+            WalletCoinIcon(asset: token.iconAsset),
             const SizedBox(width: DesignConstants.spacing16),
             Expanded(
               child: Column(
