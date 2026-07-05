@@ -38,9 +38,28 @@
 - [x] Auto-navigate to onboarding (timer)
 - [x] Widget test update
 
-## Layer 4 — Upcoming (not started)
+## Layer 4 — Onboarding flow ✅
 
-- Onboarding flow (4 frames)
+### `task/005-onboarding`
+
+- [x] Onboarding screen UI (0:57)
+- [x] WalletSectionTitle + next button
+- [x] Figma hero image asset
+
+### `task/006-seed-phrase`
+
+- [x] SeedPhraseChip component
+- [x] Seed Phrase grid screen
+- [x] Copy / Continue actions
+
+### `task/007-recovery`
+
+- [x] WalletInputField component
+- [x] Recovery screen with phrase + name inputs
+- [x] Cancel / Add actions
+
+## Layer 5 — Upcoming
+
 - Wallet main tab
 - Transaction flows
 - Token management

@@ -24,7 +24,18 @@
 - `flutter analyze` — no issues
 - `flutter test` — 12 tests passing
 
+### Layer 4 complete (onboarding flow)
+
+| Task | Branch | Commit |
+|---|---|---|
+| Onboarding | `task/005-onboarding` | feat: 实现 Onboarding 引导页 |
+| Seed Phrase | `task/006-seed-phrase` | feat: 实现 Seed Phrase 助记词页面 |
+| Recovery | `task/007-recovery` | feat: 实现 Recovery 钱包恢复页面 |
+
+- `flutter analyze` — no issues
+- `flutter test` — 17 tests passing
+- Worktrees cleaned; pushed to `origin/master`
+
 ### Next
 
-- Onboarding screens (Onboarding → Seed Phrase → Recovery)
 - Wallet main tab UI
