@@ -26,10 +26,7 @@ class FigmaPlaceholderScreen extends StatelessWidget {
               ),
               if (subtitle != null) ...[
                 const SizedBox(height: 8),
-                Text(
-                  subtitle!,
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
+                Text(subtitle!, style: Theme.of(context).textTheme.bodySmall),
               ],
             ],
           ),

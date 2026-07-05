@@ -1,6 +1,7 @@
 import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/shared/widgets/buttons/wallet_primary_button.dart';
+import 'package:figma_009/shared/widgets/buttons/wallet_slide_confirm.dart';
 import 'package:flutter/material.dart';
 
 /// Shared amount entry panel for Send/Buy/Receive detail screens.
@@ -100,10 +101,16 @@ class _TransactionAmountPanelState extends State<TransactionAmountPanel> {
               .toList(),
         ),
         const SizedBox(height: DesignConstants.spacing24),
-        WalletPrimaryButton(
-          label: widget.confirmLabel,
-          onPressed: widget.onConfirm,
-        ),
+        if (widget.confirmLabel.toLowerCase().contains('slide'))
+          WalletSlideConfirm(
+            label: widget.confirmLabel,
+            onConfirmed: widget.onConfirm,
+          )
+        else
+          WalletPrimaryButton(
+            label: widget.confirmLabel,
+            onPressed: widget.onConfirm,
+          ),
       ],
     );
   }

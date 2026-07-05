@@ -22,9 +22,7 @@ abstract final class AppTheme {
         bodyColor: AppColors.white,
         displayColor: AppColors.white,
       ),
-      extensions: const <ThemeExtension<dynamic>>[
-        WalletThemeExtension.dark,
-      ],
+      extensions: const <ThemeExtension<dynamic>>[WalletThemeExtension.dark],
     );
   }
 }

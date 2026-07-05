@@ -87,3 +87,11 @@
 - [x] Wallet Scroll 扩展列表（含 Wave）
 - [x] Scan 扫码页
 - [x] Widget tests
+
+## Layer 9 — Polish (`task/012-polish`) ✅
+
+- [x] WalletSlideConfirm 滑动确认组件
+- [x] 交易/设置详情页接入 Slide to Swap
+- [x] Wallet 余额卡跳转 Scroll 列表
+- [x] App Shell 导航集成测试
+- [x] Web 字体运行时加载配置

@@ -25,7 +25,10 @@ class WalletScreen extends StatelessWidget {
                 onPressed: () => context.push(AppRoutes.addToken),
               ),
             ),
-            const WalletBalanceCard(),
+            GestureDetector(
+              onTap: () => context.push(AppRoutes.walletScroll),
+              child: const WalletBalanceCard(),
+            ),
             const SizedBox(height: DesignConstants.spacing16),
             Expanded(
               child: Container(

@@ -91,21 +91,25 @@ GoRouter createAppRouter() {
                     routes: <RouteBase>[
                       GoRoute(
                         path: 'passcode',
-                        builder: (context, state) => const SettingsPasscodeScreen(),
+                        builder: (context, state) =>
+                            const SettingsPasscodeScreen(),
                       ),
                       GoRoute(
                         path: 'autolock',
-                        builder: (context, state) => const SettingsAutoLockScreen(),
+                        builder: (context, state) =>
+                            const SettingsAutoLockScreen(),
                       ),
                       GoRoute(
                         path: 'method',
-                        builder: (context, state) => const SettingsMethodScreen(),
+                        builder: (context, state) =>
+                            const SettingsMethodScreen(),
                       ),
                     ],
                   ),
                   GoRoute(
                     path: 'price-alerts',
-                    builder: (context, state) => const SettingsPriceAlertsScreen(),
+                    builder: (context, state) =>
+                        const SettingsPriceAlertsScreen(),
                   ),
                 ],
               ),

@@ -1,7 +1,7 @@
 import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
-import 'package:figma_009/shared/widgets/buttons/wallet_primary_button.dart';
+import 'package:figma_009/shared/widgets/buttons/wallet_slide_confirm.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -41,9 +41,9 @@ class SettingsSlideScreen extends StatelessWidget {
                     const SizedBox(height: DesignConstants.spacing8),
                     Text('Estimated 0.0223ETH', style: estimateStyle),
                     const Spacer(),
-                    WalletPrimaryButton(
+                    WalletSlideConfirm(
                       label: 'Slide to Swap',
-                      onPressed: () => context.pop(),
+                      onConfirmed: () => context.pop(),
                     ),
                   ],
                 ),
