@@ -20,6 +20,7 @@ abstract final class DesignConstants {
   // Spacing (from Figma auto-layout gaps / padding)
   static const double spacing4 = 4;
   static const double spacing8 = 8;
+  static const double spacing10 = 10;
   static const double spacing12 = 12;
   static const double spacing16 = 16;
   static const double spacing20 = 20;
