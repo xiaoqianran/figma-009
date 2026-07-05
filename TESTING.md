@@ -7,7 +7,7 @@ Run from project root (`flutter_009`):
 ```bash
 dart format lib test
 flutter analyze          # must report: No issues found!
-flutter test             # 46 tests
+flutter test             # 52 tests
 flutter test test/features/wallet/wallet_screen_test.dart   # single file
 ```
 
@@ -15,7 +15,7 @@ flutter test test/features/wallet/wallet_screen_test.dart   # single file
 
 Widget tests call `TestWidgetsFlutterBinding.ensureInitialized()` in `main()`. Fonts (Clash Display + Poppins) are bundled — no network I/O setup required.
 
-## Inventory (46 tests / 19 files)
+## Inventory (52 tests / 21 files)
 
 | File | Tests | Focus |
 |------|-------|-------|
@@ -26,6 +26,8 @@ Widget tests call `TestWidgetsFlutterBinding.ensureInitialized()` in `main()`. F
 | `test/shared/widgets/buttons/wallet_passcode_key_test.dart` | 2 | Passcode keypad render + tap |
 | `test/shared/widgets/other/wallet_passcode_indicator_test.dart` | 2 | PIN dot indicator |
 | `test/features/settings/settings_passcode_screen_test.dart` | 3 | Passcode screen PIN entry |
+| `test/features/settings/settings_security_flow_test.dart` | 4 | Auto-Lock / Method / Price Alerts |
+| `test/shared/widgets/cells/wallet_selection_cell_test.dart` | 2 | Security radio selection cell |
 | `test/shared/widgets/buttons/wallet_buttons_test.dart` | 3 | Primary, secondary, circle buttons |
 | `test/shared/widgets/buttons/wallet_slide_confirm_test.dart` | 2 | Label, full drag confirm |
 | `test/shared/widgets/bars/wallet_bars_test.dart` | 2 | Tab bar tap, nav bar title |

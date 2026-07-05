@@ -12,8 +12,8 @@ class WalletSwitchToggle extends StatelessWidget {
   final bool value;
   final ValueChanged<bool> onChanged;
 
-  static const double _width = 56;
-  static const double _height = 40;
+  static const double width = 56;
+  static const double height = 40;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,11 @@ class WalletSwitchToggle extends StatelessWidget {
       toggled: value,
       child: InkWell(
         onTap: () => onChanged(!value),
-        borderRadius: BorderRadius.circular(_height / 2),
+        borderRadius: BorderRadius.circular(height / 2),
         child: Image.asset(
           value ? WalletAssets.switchOn : WalletAssets.switchOff,
-          width: _width,
-          height: _height,
+          width: width,
+          height: height,
           fit: BoxFit.contain,
         ),
       ),

@@ -66,7 +66,7 @@ class SettingsScreen extends StatelessWidget {
                   WalletListMenuCell(
                     title: 'Push Notification',
                     iconAsset: WalletAssets.setNoti,
-                    onTap: () {},
+                    onTap: () => context.go(AppRoutes.notification),
                   ),
                   WalletListMenuCell(
                     title: 'Price Alerts',

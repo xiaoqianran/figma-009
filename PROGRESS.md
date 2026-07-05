@@ -1,7 +1,7 @@
 # Progress — figma_009
 
 **Last updated:** 2026-07-05  
-**Branch:** `master` (Layer 15 complete)  
+**Branch:** `master` (Layer 16 complete)  
 **Remote:** `origin` → https://github.com/xiaoqianran/figma-009.git
 
 ## Current status
@@ -9,11 +9,11 @@
 | Check | Result |
 |-------|--------|
 | `flutter analyze` | No issues |
-| `flutter test` | **46 / 46** passing |
+| `flutter test` | **52 / 52** passing |
 | `flutter build web` | ✓ `build/web` |
 | Design frames | All implemented (no runtime `FigmaPlaceholderScreen` routes) |
 | Icons in `lib/` | 100% Figma PNG assets (`WalletAssets`) — no `Icons.*` |
-| Layers | **0–15 complete** (see [TASKS.md](TASKS.md)) |
+| Layers | **0–16 complete** (see [TASKS.md](TASKS.md)) |
 
 ## Milestone timeline
 
@@ -105,7 +105,12 @@ Early layers used git worktrees (`flutter_009-task-00x-*`). Worktrees were merge
 - 6-digit PIN dots + input card from Figma frame `0:488`
 - Keypad fills dots; back removes digit; Slide to Save pops when complete
 
+### Layer 16 — Settings polish
+
+- Auto-Lock / Lock Method radio cards + shared `WalletSettingsState`
+- Price Alerts token rows with switches; Push Notification → Notification tab
+
 ## Next
 
 - Optional: golden / visual regression tests
-- Optional: persist passcode mock state across Settings security flow
+- Optional: Settings main page grouped card layout (Figma `0:472`)

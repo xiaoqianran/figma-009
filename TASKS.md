@@ -137,3 +137,11 @@
 - [x] `WalletPasscodeInputCard` — 「Enter your passcode」输入卡
 - [x] `SettingsPasscodeScreen` PIN 状态 + 退格 + Slide to Save
 - [x] Passcode 屏幕与指示器测试（46 tests）
+
+## Layer 16 — Settings polish (`task/019-settings-polish`) ✅
+
+- [x] Auto-Lock / Lock Method 单选卡片（Figma `Button / Check / Ration`）
+- [x] `WalletSettingsState` 跨 Security 子页同步 subtitle
+- [x] Price Alerts 改为代币行 + 开关（对齐 Figma `0:586`）
+- [x] Push Notification 跳转 Notification Tab；通知列表扩展至 8 条
+- [x] Security 流程测试（52 tests）

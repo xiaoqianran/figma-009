@@ -11,7 +11,7 @@ Rules for AI agents and contributors. Based on [Flutter AI rules](https://docs.f
 | Fonts (design) | Clash Display (titles), Poppins (body) |
 | Theme | Dark-first; tokens in `AppColors`, `DesignConstants` |
 | Architecture | Feature MVVM: `presentation` / `domain` / `data` |
-| Status | Layers 0–15 done · 28 screens · 46 tests |
+| Status | Layers 0–16 done · 28 screens · 52 tests |
 
 Read [README.md](README.md) and [ARCHITECTURE.md](ARCHITECTURE.md) before large changes.
 

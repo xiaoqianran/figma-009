@@ -26,5 +26,23 @@ abstract final class MockNotifications {
       amount: r'$ 1320 ETH',
       usdValue: r'$ 550.40 USD',
     ),
+    WalletNotification(
+      type: 'Receive',
+      from: 'From 0x8a21f01',
+      amount: r'$ 890 WAV',
+      usdValue: r'$ 48.20 USD',
+    ),
+    WalletNotification(
+      type: 'Send',
+      from: 'From 0x8a21f01',
+      amount: r'$ 45 BNB',
+      usdValue: r'$ 12,400.00 USD',
+    ),
+    WalletNotification(
+      type: 'Swap',
+      from: 'From 0x4200c90',
+      amount: r'$ 210 DAH',
+      usdValue: r'$ 2,890.50 USD',
+    ),
   ];
 }

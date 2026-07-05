@@ -1,14 +1,13 @@
 import 'package:figma_009/core/constants/design_constants.dart';
-import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/features/settings/data/mock_price_alerts.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
-import 'package:figma_009/shared/widgets/buttons/wallet_switch_toggle.dart';
-import 'package:figma_009/shared/widgets/cells/wallet_list_menu_cell.dart';
+import 'package:figma_009/shared/widgets/cells/wallet_price_alert_cell.dart';
 import 'package:figma_009/shared/widgets/other/wallet_section_title.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-/// Figma frame `Settings - Price Alerts` (0:586).
+/// Figma frame `Settings - Price Alerts` (0:586) / Scroll (0:600).
 class SettingsPriceAlertsScreen extends StatefulWidget {
   const SettingsPriceAlertsScreen({super.key});
 
@@ -18,13 +17,9 @@ class SettingsPriceAlertsScreen extends StatefulWidget {
 }
 
 class _SettingsPriceAlertsScreenState extends State<SettingsPriceAlertsScreen> {
-  static const _alerts = [
-    ('Bitcoin', 'Above \$40,000'),
-    ('Ethereum', 'Below \$5,000'),
-    ('Ripple', 'Above \$1.00'),
-  ];
-
-  final List<bool> _enabled = [true, false, true];
+  late final List<bool> _enabled = List<bool>.from(
+    MockPriceAlerts.defaultEnabled,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -55,20 +50,14 @@ class _SettingsPriceAlertsScreenState extends State<SettingsPriceAlertsScreen> {
                 padding: const EdgeInsets.symmetric(
                   horizontal: DesignConstants.spacing20,
                 ),
-                itemCount: _alerts.length,
+                itemCount: MockPriceAlerts.tokens.length,
                 itemBuilder: (context, index) {
-                  final (name, rule) = _alerts[index];
-                  return WalletListMenuCell(
-                    title: name,
-                    subtitle: rule,
-                    iconAsset: WalletAssets.setPriceAlerts,
-                    trailing: WalletSwitchToggle(
-                      value: _enabled[index],
-                      onChanged: (value) {
-                        setState(() => _enabled[index] = value);
-                      },
-                    ),
-                    onTap: () {},
+                  return WalletPriceAlertCell(
+                    token: MockPriceAlerts.tokens[index],
+                    enabled: _enabled[index],
+                    onChanged: (value) {
+                      setState(() => _enabled[index] = value);
+                    },
                   );
                 },
               ),
