@@ -1,0 +1,21 @@
+{
+  "name": "rename_node",
+  "description": "Rename a node.",
+  "inputSchema": {
+    "properties": {
+      "name": {
+        "description": "New name for the node",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "Node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId",
+      "name"
+    ],
+    "type": "object"
+  }
+}

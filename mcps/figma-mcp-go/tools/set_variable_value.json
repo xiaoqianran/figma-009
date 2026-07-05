@@ -1,0 +1,26 @@
+{
+  "name": "set_variable_value",
+  "description": "Set a variable's value for a specific mode.",
+  "inputSchema": {
+    "properties": {
+      "modeId": {
+        "description": "Mode ID within the collection",
+        "type": "string"
+      },
+      "value": {
+        "description": "Value to set. COLOR: hex e.g. #FF5733. FLOAT: number e.g. 16. STRING: text. BOOLEAN: true or false.",
+        "type": "string"
+      },
+      "variableId": {
+        "description": "Variable ID",
+        "type": "string"
+      }
+    },
+    "required": [
+      "variableId",
+      "modeId",
+      "value"
+    ],
+    "type": "object"
+  }
+}

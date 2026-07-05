@@ -1,0 +1,27 @@
+{
+  "name": "move_nodes",
+  "description": "Move one or more nodes to an absolute position on the canvas.",
+  "inputSchema": {
+    "properties": {
+      "nodeIds": {
+        "description": "Node IDs in colon format e.g. ['4029:12345']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "x": {
+        "description": "Target X position",
+        "type": "number"
+      },
+      "y": {
+        "description": "Target Y position",
+        "type": "number"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

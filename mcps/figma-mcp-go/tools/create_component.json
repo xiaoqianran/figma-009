@@ -1,0 +1,20 @@
+{
+  "name": "create_component",
+  "description": "Convert an existing FRAME node into a reusable COMPONENT. The frame is replaced in place by the new component.",
+  "inputSchema": {
+    "properties": {
+      "name": {
+        "description": "Optional name for the component. Defaults to the frame's current name.",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "FRAME node ID to convert, in colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

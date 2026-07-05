@@ -1,0 +1,16 @@
+{
+  "name": "get_reactions",
+  "description": "Get prototype/interaction reactions on a node. Useful for understanding interactive prototypes.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

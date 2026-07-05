@@ -1,0 +1,52 @@
+{
+  "name": "create_text_style",
+  "description": "Create a new local text style.",
+  "inputSchema": {
+    "properties": {
+      "description": {
+        "description": "Optional style description",
+        "type": "string"
+      },
+      "fontFamily": {
+        "description": "Font family e.g. Inter (default Inter)",
+        "type": "string"
+      },
+      "fontSize": {
+        "description": "Font size in pixels (default 16)",
+        "type": "number"
+      },
+      "fontStyle": {
+        "description": "Font style e.g. Regular, Bold (default Regular)",
+        "type": "string"
+      },
+      "letterSpacingUnit": {
+        "description": "Letter spacing unit: PIXELS or PERCENT (default PIXELS)",
+        "type": "string"
+      },
+      "letterSpacingValue": {
+        "description": "Letter spacing value",
+        "type": "number"
+      },
+      "lineHeightUnit": {
+        "description": "Line height unit: PIXELS or PERCENT (default PIXELS)",
+        "type": "string"
+      },
+      "lineHeightValue": {
+        "description": "Line height value",
+        "type": "number"
+      },
+      "name": {
+        "description": "Style name e.g. 'Heading/H1'",
+        "type": "string"
+      },
+      "textDecoration": {
+        "description": "NONE, UNDERLINE, or STRIKETHROUGH",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  }
+}

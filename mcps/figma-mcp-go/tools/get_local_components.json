@@ -1,0 +1,9 @@
+{
+  "name": "get_local_components",
+  "description": "Get all components defined in the current Figma file.",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

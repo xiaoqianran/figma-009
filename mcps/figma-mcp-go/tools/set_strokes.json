@@ -1,0 +1,29 @@
+{
+  "name": "set_strokes",
+  "description": "Set the stroke color and weight of a node.",
+  "inputSchema": {
+    "properties": {
+      "color": {
+        "description": "Stroke color as hex e.g. #000000",
+        "type": "string"
+      },
+      "mode": {
+        "description": "'replace' (default) overwrites all strokes; 'append' stacks on top of existing strokes",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "Node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      },
+      "strokeWeight": {
+        "description": "Stroke weight in pixels (default 1)",
+        "type": "number"
+      }
+    },
+    "required": [
+      "nodeId",
+      "color"
+    ],
+    "type": "object"
+  }
+}

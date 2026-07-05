@@ -1,0 +1,39 @@
+{
+  "name": "set_corner_radius",
+  "description": "Set corner radius on one or more nodes. Provide a uniform cornerRadius or individual per-corner values.",
+  "inputSchema": {
+    "properties": {
+      "bottomLeftRadius": {
+        "description": "Bottom-left corner radius",
+        "type": "number"
+      },
+      "bottomRightRadius": {
+        "description": "Bottom-right corner radius",
+        "type": "number"
+      },
+      "cornerRadius": {
+        "description": "Uniform corner radius applied to all corners",
+        "type": "number"
+      },
+      "nodeIds": {
+        "description": "Node IDs in colon format e.g. ['4029:12345']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "topLeftRadius": {
+        "description": "Top-left corner radius",
+        "type": "number"
+      },
+      "topRightRadius": {
+        "description": "Top-right corner radius",
+        "type": "number"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

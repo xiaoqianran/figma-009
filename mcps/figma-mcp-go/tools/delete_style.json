@@ -1,0 +1,16 @@
+{
+  "name": "delete_style",
+  "description": "Delete a style (paint, text, effect, or grid) by its ID.",
+  "inputSchema": {
+    "properties": {
+      "styleId": {
+        "description": "Style ID to delete",
+        "type": "string"
+      }
+    },
+    "required": [
+      "styleId"
+    ],
+    "type": "object"
+  }
+}

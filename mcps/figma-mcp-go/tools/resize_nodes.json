@@ -1,0 +1,27 @@
+{
+  "name": "resize_nodes",
+  "description": "Resize one or more nodes. Provide width, height, or both.",
+  "inputSchema": {
+    "properties": {
+      "height": {
+        "description": "New height in pixels",
+        "type": "number"
+      },
+      "nodeIds": {
+        "description": "Node IDs in colon format e.g. ['4029:12345']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "width": {
+        "description": "New width in pixels",
+        "type": "number"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

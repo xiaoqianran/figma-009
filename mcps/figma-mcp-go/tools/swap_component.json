@@ -1,0 +1,21 @@
+{
+  "name": "swap_component",
+  "description": "Swap the main component of an existing INSTANCE node, replacing it with a different component while keeping position and size.",
+  "inputSchema": {
+    "properties": {
+      "componentId": {
+        "description": "Target COMPONENT node ID in colon format (from get_local_components)",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "INSTANCE node ID in colon format e.g. 4029:12345",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId",
+      "componentId"
+    ],
+    "type": "object"
+  }
+}

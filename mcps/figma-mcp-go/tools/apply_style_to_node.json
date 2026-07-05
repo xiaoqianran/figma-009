@@ -1,0 +1,25 @@
+{
+  "name": "apply_style_to_node",
+  "description": "Apply an existing local style (paint, text, effect, or grid) to a node, linking the node to that style.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Target node ID in colon format e.g. 4029:12345",
+        "type": "string"
+      },
+      "styleId": {
+        "description": "Style ID to apply (from get_styles)",
+        "type": "string"
+      },
+      "target": {
+        "description": "For paint styles only — apply to 'fill' (default) or 'stroke'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId",
+      "styleId"
+    ],
+    "type": "object"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "create_frame",
+  "description": "Create a new frame on the current page or inside a parent node.",
+  "inputSchema": {
+    "properties": {
+      "counterAxisAlignItems": {
+        "description": "Cross-axis alignment: MIN, CENTER, MAX, or BASELINE",
+        "type": "string"
+      },
+      "counterAxisSizingMode": {
+        "description": "Cross-axis sizing: FIXED or AUTO (hug)",
+        "type": "string"
+      },
+      "counterAxisSpacing": {
+        "description": "Gap between wrapped rows/columns (only when layoutWrap is WRAP)",
+        "type": "number"
+      },
+      "fillColor": {
+        "description": "Fill color as hex e.g. #FFFFFF",
+        "type": "string"
+      },
+      "height": {
+        "description": "Height in pixels (default 100)",
+        "type": "number"
+      },
+      "itemSpacing": {
+        "description": "Auto-layout gap between children",
+        "type": "number"
+      },
+      "layoutMode": {
+        "description": "Auto-layout direction: HORIZONTAL, VERTICAL, or NONE",
+        "type": "string"
+      },
+      "layoutWrap": {
+        "description": "Wrap behaviour: NO_WRAP or WRAP",
+        "type": "string"
+      },
+      "name": {
+        "description": "Frame name",
+        "type": "string"
+      },
+      "paddingBottom": {
+        "description": "Auto-layout bottom padding",
+        "type": "number"
+      },
+      "paddingLeft": {
+        "description": "Auto-layout left padding",
+        "type": "number"
+      },
+      "paddingRight": {
+        "description": "Auto-layout right padding",
+        "type": "number"
+      },
+      "paddingTop": {
+        "description": "Auto-layout top padding",
+        "type": "number"
+      },
+      "parentId": {
+        "description": "Parent node ID in colon format. Defaults to current page.",
+        "type": "string"
+      },
+      "primaryAxisAlignItems": {
+        "description": "Main-axis alignment: MIN, CENTER, MAX, or SPACE_BETWEEN",
+        "type": "string"
+      },
+      "primaryAxisSizingMode": {
+        "description": "Main-axis sizing: FIXED or AUTO (hug)",
+        "type": "string"
+      },
+      "width": {
+        "description": "Width in pixels (default 100)",
+        "type": "number"
+      },
+      "x": {
+        "description": "X position (default 0)",
+        "type": "number"
+      },
+      "y": {
+        "description": "Y position (default 0)",
+        "type": "number"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

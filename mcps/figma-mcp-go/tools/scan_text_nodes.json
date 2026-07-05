@@ -1,0 +1,16 @@
+{
+  "name": "scan_text_nodes",
+  "description": "Scan all TEXT nodes in a subtree. Useful for extracting all copy from a component or frame.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Root node ID to scan from, colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

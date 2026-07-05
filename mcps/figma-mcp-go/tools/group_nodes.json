@@ -1,0 +1,23 @@
+{
+  "name": "group_nodes",
+  "description": "Group two or more nodes into a GROUP. All nodes must share the same parent.",
+  "inputSchema": {
+    "properties": {
+      "name": {
+        "description": "Optional name for the new group",
+        "type": "string"
+      },
+      "nodeIds": {
+        "description": "Node IDs to group (minimum 2), in colon format e.g. ['4029:12345', '4029:12346']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

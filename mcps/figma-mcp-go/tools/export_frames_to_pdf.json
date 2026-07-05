@@ -1,0 +1,24 @@
+{
+  "name": "export_frames_to_pdf",
+  "description": "Export multiple frames as a single multi-page PDF file. Each frame becomes one page in order. Ideal for pitch decks, proposals, and slide exports.",
+  "inputSchema": {
+    "properties": {
+      "nodeIds": {
+        "description": "Ordered list of frame node IDs to export as PDF pages, colon format e.g. '4029:12345'",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "outputPath": {
+        "description": "File path to write the PDF to, must end in .pdf (relative to working directory or absolute)",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeIds",
+      "outputPath"
+    ],
+    "type": "object"
+  }
+}

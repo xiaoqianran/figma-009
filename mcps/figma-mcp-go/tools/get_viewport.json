@@ -1,0 +1,9 @@
+{
+  "name": "get_viewport",
+  "description": "Get the current Figma viewport: scroll center, zoom level, and visible bounds.",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

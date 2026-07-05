@@ -1,0 +1,19 @@
+{
+  "name": "ungroup_nodes",
+  "description": "Ungroup one or more GROUP nodes, moving their children to the parent and removing the group.",
+  "inputSchema": {
+    "properties": {
+      "nodeIds": {
+        "description": "GROUP node IDs in colon format e.g. ['4029:12345']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

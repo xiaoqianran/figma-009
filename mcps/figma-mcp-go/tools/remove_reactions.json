@@ -1,0 +1,23 @@
+{
+  "name": "remove_reactions",
+  "description": "Remove prototype reactions from a node. Omit indices to remove all reactions. Provide a zero-based indices array to remove specific reactions (use get_reactions first to see current indices).",
+  "inputSchema": {
+    "properties": {
+      "indices": {
+        "description": "Zero-based indices of reactions to remove. Omit or pass [] to remove all.",
+        "items": {
+          "type": "number"
+        },
+        "type": "array"
+      },
+      "nodeId": {
+        "description": "Node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

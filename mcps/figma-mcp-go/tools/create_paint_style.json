@@ -1,0 +1,25 @@
+{
+  "name": "create_paint_style",
+  "description": "Create a new local paint style with a solid fill color.",
+  "inputSchema": {
+    "properties": {
+      "color": {
+        "description": "Fill color as hex e.g. #FF5733",
+        "type": "string"
+      },
+      "description": {
+        "description": "Optional style description",
+        "type": "string"
+      },
+      "name": {
+        "description": "Style name e.g. 'Brand/Primary'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "color"
+    ],
+    "type": "object"
+  }
+}

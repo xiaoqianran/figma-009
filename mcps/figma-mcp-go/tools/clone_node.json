@@ -1,0 +1,28 @@
+{
+  "name": "clone_node",
+  "description": "Clone an existing node, optionally repositioning it or placing it in a new parent.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Source node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      },
+      "parentId": {
+        "description": "Parent node ID for the clone. Defaults to same parent as source.",
+        "type": "string"
+      },
+      "x": {
+        "description": "X position of the clone",
+        "type": "number"
+      },
+      "y": {
+        "description": "Y position of the clone",
+        "type": "number"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

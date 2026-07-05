@@ -1,0 +1,44 @@
+{
+  "name": "import_image",
+  "description": "Import a base64-encoded image into Figma as a rectangle with an image fill. Use get_screenshot to capture images or provide your own base64 PNG/JPG.",
+  "inputSchema": {
+    "properties": {
+      "height": {
+        "description": "Height in pixels (default 200)",
+        "type": "number"
+      },
+      "imageData": {
+        "description": "Base64-encoded image data (PNG or JPG)",
+        "type": "string"
+      },
+      "name": {
+        "description": "Node name",
+        "type": "string"
+      },
+      "parentId": {
+        "description": "Parent node ID in colon format. Defaults to current page.",
+        "type": "string"
+      },
+      "scaleMode": {
+        "description": "Image scale mode: FILL (default), FIT, CROP, or TILE",
+        "type": "string"
+      },
+      "width": {
+        "description": "Width in pixels (default 200)",
+        "type": "number"
+      },
+      "x": {
+        "description": "X position (default 0)",
+        "type": "number"
+      },
+      "y": {
+        "description": "Y position (default 0)",
+        "type": "number"
+      }
+    },
+    "required": [
+      "imageData"
+    ],
+    "type": "object"
+  }
+}

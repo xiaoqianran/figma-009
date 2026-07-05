@@ -1,0 +1,9 @@
+{
+  "name": "get_styles",
+  "description": "Get all local styles in the document: paint, text, effect, and grid styles",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

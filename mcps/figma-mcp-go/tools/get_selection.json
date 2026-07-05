@@ -1,0 +1,9 @@
+{
+  "name": "get_selection",
+  "description": "Get the currently selected nodes in Figma",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "get_metadata",
+  "description": "Get metadata about the current Figma document: file name, pages, current page",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

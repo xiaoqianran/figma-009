@@ -1,0 +1,19 @@
+{
+  "name": "delete_nodes",
+  "description": "Delete one or more nodes. This cannot be undone via MCP — use with care.",
+  "inputSchema": {
+    "properties": {
+      "nodeIds": {
+        "description": "Node IDs to delete in colon format e.g. ['4029:12345']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

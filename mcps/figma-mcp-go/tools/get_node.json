@@ -1,0 +1,16 @@
+{
+  "name": "get_node",
+  "description": "Get a specific Figma node by ID. Must use colon format e.g. '4029:12345', never hyphens.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

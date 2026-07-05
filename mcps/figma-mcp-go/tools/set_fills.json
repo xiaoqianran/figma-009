@@ -1,0 +1,29 @@
+{
+  "name": "set_fills",
+  "description": "Set the fill color of a node.",
+  "inputSchema": {
+    "properties": {
+      "color": {
+        "description": "Fill color as hex e.g. #FF5733",
+        "type": "string"
+      },
+      "mode": {
+        "description": "'replace' (default) overwrites all fills; 'append' stacks on top of existing fills",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "Node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      },
+      "opacity": {
+        "description": "Fill opacity 0–1 (default 1)",
+        "type": "number"
+      }
+    },
+    "required": [
+      "nodeId",
+      "color"
+    ],
+    "type": "object"
+  }
+}

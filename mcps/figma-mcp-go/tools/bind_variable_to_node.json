@@ -1,0 +1,26 @@
+{
+  "name": "bind_variable_to_node",
+  "description": "Bind a local variable to a node property, so the property is driven by the variable's value. Use 'fillColor' to bind a COLOR variable to the node's fill color. Use other fields (opacity, width, height, cornerRadius, itemSpacing, paddingTop, paddingRight, paddingBottom, paddingLeft) for FLOAT variables.",
+  "inputSchema": {
+    "properties": {
+      "field": {
+        "description": "Property to bind: fillColor | opacity | width | height | cornerRadius | itemSpacing | paddingTop | paddingRight | paddingBottom | paddingLeft",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "Target node ID in colon format e.g. 4029:12345",
+        "type": "string"
+      },
+      "variableId": {
+        "description": "Variable ID to bind (from get_variable_defs)",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId",
+      "variableId",
+      "field"
+    ],
+    "type": "object"
+  }
+}

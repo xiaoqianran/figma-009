@@ -1,0 +1,9 @@
+{
+  "name": "get_fonts",
+  "description": "List all fonts used in the current page, sorted by usage frequency. Useful for understanding typography without scanning all text nodes.",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "get_document",
+  "description": "Get the current Figma page document tree",
+  "inputSchema": {
+    "properties": {},
+    "required": [],
+    "type": "object"
+  }
+}

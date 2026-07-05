@@ -1,0 +1,24 @@
+{
+  "name": "scan_nodes_by_types",
+  "description": "Find all nodes matching specific types (e.g. FRAME, COMPONENT, INSTANCE) within a subtree.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Root node ID to scan from, colon format e.g. '4029:12345'",
+        "type": "string"
+      },
+      "types": {
+        "description": "Node types to find e.g. ['FRAME', 'COMPONENT', 'INSTANCE']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "nodeId",
+      "types"
+    ],
+    "type": "object"
+  }
+}

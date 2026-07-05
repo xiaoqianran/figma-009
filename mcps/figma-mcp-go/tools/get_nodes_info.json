@@ -1,0 +1,19 @@
+{
+  "name": "get_nodes_info",
+  "description": "Get detailed information about multiple Figma nodes by ID in a single call.",
+  "inputSchema": {
+    "properties": {
+      "nodeIds": {
+        "description": "List of node IDs in colon format e.g. ['4029:12345', '4029:67890']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

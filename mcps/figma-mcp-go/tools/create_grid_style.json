@@ -1,0 +1,52 @@
+{
+  "name": "create_grid_style",
+  "description": "Create a new local layout grid style.",
+  "inputSchema": {
+    "properties": {
+      "alignment": {
+        "description": "Alignment: STRETCH (default), CENTER, MIN, or MAX (COLUMNS/ROWS only)",
+        "type": "string"
+      },
+      "color": {
+        "description": "Grid line color as hex e.g. #FF0000 (GRID only, default #FF0000)",
+        "type": "string"
+      },
+      "count": {
+        "description": "Number of columns or rows (COLUMNS/ROWS only, default 12)",
+        "type": "number"
+      },
+      "description": {
+        "description": "Optional style description",
+        "type": "string"
+      },
+      "gutterSize": {
+        "description": "Gutter size in pixels (COLUMNS/ROWS only, default 16)",
+        "type": "number"
+      },
+      "name": {
+        "description": "Style name e.g. 'Grid/Desktop'",
+        "type": "string"
+      },
+      "offset": {
+        "description": "Margin/offset in pixels (COLUMNS/ROWS only, default 0)",
+        "type": "number"
+      },
+      "opacity": {
+        "description": "Grid line opacity 0–1 (GRID only, default 0.1)",
+        "type": "number"
+      },
+      "pattern": {
+        "description": "Grid pattern: GRID (default), COLUMNS, or ROWS",
+        "type": "string"
+      },
+      "sectionSize": {
+        "description": "Grid cell size in pixels (GRID only, default 8)",
+        "type": "number"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  }
+}

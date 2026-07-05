@@ -1,0 +1,49 @@
+{
+  "name": "save_screenshots",
+  "description": "Export screenshots for multiple nodes and save them to the local filesystem. Returns metadata only (no base64).",
+  "inputSchema": {
+    "properties": {
+      "format": {
+        "description": "Default export format: PNG (default), SVG, JPG, or PDF",
+        "type": "string"
+      },
+      "items": {
+        "description": "List of {nodeId, outputPath, format?, scale?} objects",
+        "items": {
+          "properties": {
+            "format": {
+              "description": "Export format: PNG, SVG, JPG, or PDF",
+              "type": "string"
+            },
+            "nodeId": {
+              "description": "Node ID in colon format e.g. '4029:12345'",
+              "type": "string"
+            },
+            "outputPath": {
+              "description": "File path to write the image to",
+              "type": "string"
+            },
+            "scale": {
+              "description": "Export scale for raster formats",
+              "type": "number"
+            }
+          },
+          "required": [
+            "nodeId",
+            "outputPath"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "scale": {
+        "description": "Default export scale for raster formats (default 2)",
+        "type": "number"
+      }
+    },
+    "required": [
+      "items"
+    ],
+    "type": "object"
+  }
+}

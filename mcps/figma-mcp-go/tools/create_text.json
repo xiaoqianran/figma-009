@@ -1,0 +1,48 @@
+{
+  "name": "create_text",
+  "description": "Create a new text node on the current page or inside a parent node.",
+  "inputSchema": {
+    "properties": {
+      "fillColor": {
+        "description": "Text color as hex e.g. #000000",
+        "type": "string"
+      },
+      "fontFamily": {
+        "description": "Font family e.g. Inter (default Inter)",
+        "type": "string"
+      },
+      "fontSize": {
+        "description": "Font size in pixels (default 14)",
+        "type": "number"
+      },
+      "fontStyle": {
+        "description": "Font style e.g. Regular, Bold (default Regular)",
+        "type": "string"
+      },
+      "name": {
+        "description": "Node name",
+        "type": "string"
+      },
+      "parentId": {
+        "description": "Parent node ID in colon format. Defaults to current page.",
+        "type": "string"
+      },
+      "text": {
+        "description": "Text content",
+        "type": "string"
+      },
+      "x": {
+        "description": "X position (default 0)",
+        "type": "number"
+      },
+      "y": {
+        "description": "Y position (default 0)",
+        "type": "number"
+      }
+    },
+    "required": [
+      "text"
+    ],
+    "type": "object"
+  }
+}

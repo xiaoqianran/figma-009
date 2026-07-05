@@ -1,0 +1,48 @@
+{
+  "name": "create_effect_style",
+  "description": "Create a new local effect style (drop shadow, inner shadow, or blur).",
+  "inputSchema": {
+    "properties": {
+      "color": {
+        "description": "Shadow color as hex e.g. #000000 (default #000000, shadows only)",
+        "type": "string"
+      },
+      "description": {
+        "description": "Optional style description",
+        "type": "string"
+      },
+      "name": {
+        "description": "Style name e.g. 'Shadow/Card'",
+        "type": "string"
+      },
+      "offsetX": {
+        "description": "Shadow X offset in pixels (default 0, shadows only)",
+        "type": "number"
+      },
+      "offsetY": {
+        "description": "Shadow Y offset in pixels (default 4, shadows only)",
+        "type": "number"
+      },
+      "opacity": {
+        "description": "Shadow color opacity 0–1 (default 0.25, shadows only)",
+        "type": "number"
+      },
+      "radius": {
+        "description": "Blur radius in pixels (default 8 for shadows, 4 for blurs)",
+        "type": "number"
+      },
+      "spread": {
+        "description": "Shadow spread in pixels (default 0, shadows only)",
+        "type": "number"
+      },
+      "type": {
+        "description": "Effect type: DROP_SHADOW (default), INNER_SHADOW, LAYER_BLUR, or BACKGROUND_BLUR",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  }
+}

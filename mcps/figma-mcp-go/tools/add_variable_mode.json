@@ -1,0 +1,21 @@
+{
+  "name": "add_variable_mode",
+  "description": "Add a new mode to an existing variable collection (e.g. Light/Dark, Desktop/Mobile).",
+  "inputSchema": {
+    "properties": {
+      "collectionId": {
+        "description": "Variable collection ID",
+        "type": "string"
+      },
+      "modeName": {
+        "description": "Name for the new mode",
+        "type": "string"
+      }
+    },
+    "required": [
+      "collectionId",
+      "modeName"
+    ],
+    "type": "object"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "get_screenshot",
+  "description": "Export a screenshot of selected or specific nodes. Returns base64-encoded image data.",
+  "inputSchema": {
+    "properties": {
+      "format": {
+        "description": "Export format: PNG (default), SVG, JPG, or PDF",
+        "type": "string"
+      },
+      "nodeIds": {
+        "description": "Optional node IDs to export, colon format. If empty, exports current selection.",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "scale": {
+        "description": "Export scale for raster formats (default 2)",
+        "type": "number"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

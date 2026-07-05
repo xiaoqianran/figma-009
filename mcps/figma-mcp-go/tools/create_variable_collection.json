@@ -1,0 +1,20 @@
+{
+  "name": "create_variable_collection",
+  "description": "Create a new local variable collection.",
+  "inputSchema": {
+    "properties": {
+      "initialModeName": {
+        "description": "Name for the initial mode (default 'Mode 1')",
+        "type": "string"
+      },
+      "name": {
+        "description": "Collection name",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "navigate_to_page",
+  "description": "Switch the active Figma page. Provide either pageId or pageName.",
+  "inputSchema": {
+    "properties": {
+      "pageId": {
+        "description": "Page node ID in colon format e.g. '0:1'",
+        "type": "string"
+      },
+      "pageName": {
+        "description": "Exact page name to navigate to",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

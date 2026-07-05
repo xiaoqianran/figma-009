@@ -1,0 +1,30 @@
+{
+  "name": "create_variable",
+  "description": "Create a new variable in a collection.",
+  "inputSchema": {
+    "properties": {
+      "collectionId": {
+        "description": "Variable collection ID",
+        "type": "string"
+      },
+      "name": {
+        "description": "Variable name",
+        "type": "string"
+      },
+      "type": {
+        "description": "Variable type: COLOR, FLOAT, STRING, or BOOLEAN",
+        "type": "string"
+      },
+      "value": {
+        "description": "Initial value for the first mode. COLOR: hex e.g. #FF5733. FLOAT: number e.g. 16. STRING: text. BOOLEAN: true or false.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "name",
+      "collectionId",
+      "type"
+    ],
+    "type": "object"
+  }
+}

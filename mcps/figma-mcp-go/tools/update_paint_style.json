@@ -1,0 +1,28 @@
+{
+  "name": "update_paint_style",
+  "description": "Update the name, color, or description of an existing paint style.",
+  "inputSchema": {
+    "properties": {
+      "color": {
+        "description": "New fill color as hex e.g. #FF5733",
+        "type": "string"
+      },
+      "description": {
+        "description": "New style description",
+        "type": "string"
+      },
+      "name": {
+        "description": "New style name",
+        "type": "string"
+      },
+      "styleId": {
+        "description": "Paint style ID",
+        "type": "string"
+      }
+    },
+    "required": [
+      "styleId"
+    ],
+    "type": "object"
+  }
+}

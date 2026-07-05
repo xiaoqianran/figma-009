@@ -1,0 +1,64 @@
+{
+  "name": "set_auto_layout",
+  "description": "Set or update auto-layout (flex) properties on an existing frame.",
+  "inputSchema": {
+    "properties": {
+      "counterAxisAlignItems": {
+        "description": "Cross-axis alignment: MIN, CENTER, MAX, or BASELINE",
+        "type": "string"
+      },
+      "counterAxisSizingMode": {
+        "description": "Cross-axis sizing: FIXED or AUTO (hug)",
+        "type": "string"
+      },
+      "counterAxisSpacing": {
+        "description": "Gap between wrapped rows/columns (only when layoutWrap is WRAP)",
+        "type": "number"
+      },
+      "itemSpacing": {
+        "description": "Gap between children",
+        "type": "number"
+      },
+      "layoutMode": {
+        "description": "Auto-layout direction: HORIZONTAL, VERTICAL, or NONE",
+        "type": "string"
+      },
+      "layoutWrap": {
+        "description": "Wrap behaviour: NO_WRAP or WRAP",
+        "type": "string"
+      },
+      "nodeId": {
+        "description": "Frame node ID in colon format e.g. '4029:12345'",
+        "type": "string"
+      },
+      "paddingBottom": {
+        "description": "Bottom padding",
+        "type": "number"
+      },
+      "paddingLeft": {
+        "description": "Left padding",
+        "type": "number"
+      },
+      "paddingRight": {
+        "description": "Right padding",
+        "type": "number"
+      },
+      "paddingTop": {
+        "description": "Top padding",
+        "type": "number"
+      },
+      "primaryAxisAlignItems": {
+        "description": "Main-axis alignment: MIN, CENTER, MAX, or SPACE_BETWEEN",
+        "type": "string"
+      },
+      "primaryAxisSizingMode": {
+        "description": "Main-axis sizing: FIXED or AUTO (hug)",
+        "type": "string"
+      }
+    },
+    "required": [
+      "nodeId"
+    ],
+    "type": "object"
+  }
+}

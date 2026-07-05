@@ -1,0 +1,19 @@
+{
+  "name": "detach_instance",
+  "description": "Detach one or more component instances, converting them to plain frames. The link to the main component is broken; all visual properties are preserved.",
+  "inputSchema": {
+    "properties": {
+      "nodeIds": {
+        "description": "INSTANCE node IDs in colon format e.g. ['4029:12345']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "nodeIds"
+    ],
+    "type": "object"
+  }
+}

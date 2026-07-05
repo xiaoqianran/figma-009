@@ -1,0 +1,14 @@
+{
+  "name": "get_annotations",
+  "description": "Get all dev-mode annotations in the current document or on a specific node.",
+  "inputSchema": {
+    "properties": {
+      "nodeId": {
+        "description": "Optional node ID to filter annotations, colon format e.g. '4029:12345'",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

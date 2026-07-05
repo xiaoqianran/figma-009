@@ -1,0 +1,38 @@
+{
+  "name": "create_ellipse",
+  "description": "Create a new ellipse (circle/oval) on the current page or inside a parent node.",
+  "inputSchema": {
+    "properties": {
+      "fillColor": {
+        "description": "Fill color as hex e.g. #3B82F6",
+        "type": "string"
+      },
+      "height": {
+        "description": "Height in pixels (default 100)",
+        "type": "number"
+      },
+      "name": {
+        "description": "Ellipse name",
+        "type": "string"
+      },
+      "parentId": {
+        "description": "Parent node ID in colon format. Defaults to current page.",
+        "type": "string"
+      },
+      "width": {
+        "description": "Width in pixels (default 100)",
+        "type": "number"
+      },
+      "x": {
+        "description": "X position (default 0)",
+        "type": "number"
+      },
+      "y": {
+        "description": "Y position (default 0)",
+        "type": "number"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

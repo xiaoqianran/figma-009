@@ -1,0 +1,18 @@
+{
+  "name": "delete_variable",
+  "description": "Delete a variable or an entire variable collection. Provide either variableId or collectionId.",
+  "inputSchema": {
+    "properties": {
+      "collectionId": {
+        "description": "Collection ID to delete (removes all variables in the collection)",
+        "type": "string"
+      },
+      "variableId": {
+        "description": "Variable ID to delete",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "search_nodes",
+  "description": "Search for nodes by name substring and/or type within a subtree. Avoids dumping the entire document tree.",
+  "inputSchema": {
+    "properties": {
+      "limit": {
+        "description": "Maximum results to return (default: 50)",
+        "type": "number"
+      },
+      "nodeId": {
+        "description": "Scope search to this subtree (default: current page), colon format e.g. '4029:12345'",
+        "type": "string"
+      },
+      "query": {
+        "description": "Name substring to match (case-insensitive)",
+        "type": "string"
+      },
+      "types": {
+        "description": "Filter by Figma node type e.g. ['TEXT', 'FRAME', 'COMPONENT']",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "query"
+    ],
+    "type": "object"
+  }
+}
