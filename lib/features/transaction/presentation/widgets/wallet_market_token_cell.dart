@@ -2,6 +2,7 @@ import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/features/wallet/data/mock_wallet_tokens.dart';
 import 'package:figma_009/shared/widgets/other/wallet_coin_icon.dart';
+import 'package:figma_009/shared/widgets/other/wallet_trend_icon.dart';
 import 'package:flutter/material.dart';
 
 /// Figma Buy list cell — ticker symbol on the second row instead of balance.
@@ -60,13 +61,7 @@ class WalletMarketTokenCell extends StatelessWidget {
                           const Spacer(),
                           Text(token.changePercent, style: changeStyle),
                           const SizedBox(width: DesignConstants.spacing8),
-                          Icon(
-                            token.isUp ? Icons.north_east : Icons.south_east,
-                            size: DesignConstants.iconSize24,
-                            color: token.isUp
-                                ? AppColors.titleGradient.colors.first
-                                : AppColors.pinkGradient.colors.last,
-                          ),
+                          WalletTrendIcon(isUp: token.isUp),
                         ],
                       ),
                     ],

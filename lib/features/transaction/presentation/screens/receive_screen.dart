@@ -1,6 +1,8 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/router/app_routes.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/wallet_receive_profile_card.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
 import 'package:figma_009/shared/widgets/buttons/wallet_circle_button.dart';
@@ -65,19 +67,28 @@ class ReceiveScreen extends StatelessWidget {
                 children: [
                   _ReceiveAction(
                     label: 'Buy',
-                    icon: const Icon(Icons.add, color: AppColors.black),
+                    icon: const WalletAssetIcon(
+                      WalletAssets.iconAdd,
+                      color: AppColors.black,
+                    ),
                     labelStyle: actionStyle,
                     onPressed: () => context.push(AppRoutes.buy),
                   ),
                   _ReceiveAction(
                     label: 'Set Amount',
-                    icon: const Icon(Icons.edit, color: AppColors.black),
+                    icon: const WalletAssetIcon(
+                      WalletAssets.iconAmount,
+                      color: AppColors.black,
+                    ),
                     labelStyle: actionStyle,
                     onPressed: () => context.push(AppRoutes.receiveDetail),
                   ),
                   _ReceiveAction(
                     label: 'Share',
-                    icon: const Icon(Icons.share, color: AppColors.black),
+                    icon: const WalletAssetIcon(
+                      WalletAssets.iconShare,
+                      color: AppColors.black,
+                    ),
                     labelStyle: actionStyle,
                     onPressed: () {},
                   ),

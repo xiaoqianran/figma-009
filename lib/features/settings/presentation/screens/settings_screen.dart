@@ -1,4 +1,5 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/router/app_routes.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/wallet_receive_profile_card.dart';
@@ -54,15 +55,22 @@ class SettingsScreen extends StatelessWidget {
                 children: [
                   WalletListMenuCell(
                     title: 'Security',
+                    iconAsset: WalletAssets.setLock,
                     onTap: () => context.push(AppRoutes.settingsSecurity),
                   ),
                   WalletListMenuCell(
                     title: 'Preferences',
+                    iconAsset: WalletAssets.setPreferences,
                     onTap: () => context.push(AppRoutes.settingsInput),
                   ),
-                  WalletListMenuCell(title: 'Push Notification', onTap: () {}),
+                  WalletListMenuCell(
+                    title: 'Push Notification',
+                    iconAsset: WalletAssets.setNoti,
+                    onTap: () {},
+                  ),
                   WalletListMenuCell(
                     title: 'Price Alerts',
+                    iconAsset: WalletAssets.setPriceAlerts,
                     onTap: () => context.push(AppRoutes.settingsPriceAlerts),
                   ),
                 ],

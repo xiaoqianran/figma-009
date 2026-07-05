@@ -1,4 +1,6 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/transaction_amount_panel.dart';
 import 'package:figma_009/features/wallet/data/mock_wallet_tokens.dart';
@@ -65,9 +67,8 @@ class BuyDetailScreen extends StatelessWidget {
                                 DesignConstants.spacing16,
                               ),
                             ),
-                            child: const Icon(
-                              Icons.credit_card,
-                              color: AppColors.white,
+                            child: const WalletAssetIcon(
+                              WalletAssets.iconAmount,
                             ),
                           ),
                           const SizedBox(width: DesignConstants.spacing16),

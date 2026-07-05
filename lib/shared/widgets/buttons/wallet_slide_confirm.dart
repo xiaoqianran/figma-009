@@ -1,5 +1,7 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:flutter/material.dart';
 
 /// Figma slide-to-confirm control (e.g. "Slide to Swap").
@@ -101,6 +103,7 @@ class _WalletSlideConfirmState extends State<WalletSlideConfirm> {
                 curve: Curves.easeOutCubic,
                 left: _dragOffset + 8,
                 child: GestureDetector(
+                  key: const ValueKey('slide-thumb'),
                   onHorizontalDragStart: (_) => _onDragStart(),
                   onHorizontalDragUpdate: (details) =>
                       _onDragUpdate(details, maxOffset),
@@ -113,9 +116,10 @@ class _WalletSlideConfirmState extends State<WalletSlideConfirm> {
                       color: AppColors.black,
                       border: Border.all(color: AppColors.white, width: 2),
                     ),
-                    child: Icon(
-                      _confirmed ? Icons.check : Icons.chevron_right,
-                      color: AppColors.white,
+                    child: WalletAssetIcon(
+                      _confirmed
+                          ? WalletAssets.iconCheck
+                          : WalletAssets.iconArrow,
                       size: DesignConstants.iconSize32,
                     ),
                   ),

@@ -5,6 +5,7 @@ import 'package:figma_009/features/token/presentation/screens/token_screens.dart
 import 'package:figma_009/features/transaction/presentation/screens/transaction_screens.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/swap_token_card.dart';
 import 'package:figma_009/shared/widgets/cells/wallet_add_token_cell.dart';
+import 'package:figma_009/shared/widgets/other/wallet_coin_icon.dart';
 import 'package:figma_009/shared/widgets/cells/wallet_notification_cell.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -71,6 +72,7 @@ void main() {
     expect(find.text('Freddy'), findsOneWidget);
     expect(find.text('Security'), findsOneWidget);
     expect(find.text('Price Alerts'), findsOneWidget);
+    expect(find.byType(WalletCoinIcon), findsNWidgets(4));
   });
 
   testWidgets('AddTokenScreen renders token list', (tester) async {

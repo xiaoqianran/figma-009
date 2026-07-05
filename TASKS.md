@@ -109,3 +109,10 @@
 - [x] 导出 56px 代币图标（BTC/ETH/DASH/WAV/PEC/BNB/XRP）
 - [x] `WalletAssetIcon` + `WalletCoinIcon` 共享组件
 - [x] 导航栏、余额卡、代币列表、Swap 接入 Figma 图标
+
+## Layer 12 — Settings & misc icons (`task/015-settings-icons`) ✅
+
+- [x] Settings / Security 菜单 56px 图标
+- [x] Receive 页 Buy / Set Amount / Share 图标
+- [x] Swap 切换、Buy Detail、趋势箭头、Slide 滑块、Onboarding 按钮
+- [x] `lib/` 内 Material Icons 全部替换为 Figma 资源

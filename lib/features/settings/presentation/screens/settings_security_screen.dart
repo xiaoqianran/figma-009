@@ -1,4 +1,5 @@
 import 'package:figma_009/core/constants/design_constants.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/router/app_routes.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
@@ -43,16 +44,19 @@ class SettingsSecurityScreen extends StatelessWidget {
                 children: [
                   WalletListMenuCell(
                     title: 'Passcode',
+                    iconAsset: WalletAssets.setLock,
                     onTap: () => context.push(AppRoutes.settingsPasscode),
                   ),
                   WalletListMenuCell(
                     title: 'Auto - Lock',
                     subtitle: 'Immediate',
+                    iconAsset: WalletAssets.setAutolock,
                     onTap: () => context.push(AppRoutes.settingsAutoLock),
                   ),
                   WalletListMenuCell(
                     title: 'Lock Method',
                     subtitle: 'Passcode',
+                    iconAsset: WalletAssets.setMethod,
                     onTap: () => context.push(AppRoutes.settingsMethod),
                   ),
                 ],

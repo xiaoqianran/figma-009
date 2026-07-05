@@ -3,6 +3,7 @@ import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
 import 'package:figma_009/features/transaction/presentation/widgets/swap_token_card.dart';
 import 'package:figma_009/shared/widgets/buttons/wallet_primary_button.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:figma_009/shared/widgets/other/wallet_section_title.dart';
 import 'package:flutter/material.dart';
 
@@ -63,9 +64,8 @@ class SwapScreen extends StatelessWidget {
                         shape: BoxShape.circle,
                         border: Border.all(color: const Color(0xFF212121)),
                       ),
-                      child: const Icon(
-                        Icons.swap_vert,
-                        color: AppColors.white,
+                      child: const WalletAssetIcon(
+                        WalletAssets.iconSwapVertical,
                       ),
                     ),
                     const SizedBox(height: DesignConstants.spacing16),

@@ -1,5 +1,7 @@
 import 'package:figma_009/core/constants/design_constants.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/core/constants/wallet_assets.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:figma_009/shared/widgets/other/wallet_coin_icon.dart';
 import 'package:flutter/material.dart';
 
@@ -57,9 +59,8 @@ class WalletAddTokenCell extends StatelessWidget {
                 ],
               ),
             ),
-            const Icon(
-              Icons.add_circle_outline,
-              color: AppColors.white,
+            const WalletAssetIcon(
+              WalletAssets.iconAdd,
               size: DesignConstants.iconSize24,
             ),
           ],

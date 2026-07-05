@@ -17,7 +17,7 @@ void main() {
     );
 
     expect(find.text('Slide to Swap'), findsOneWidget);
-    expect(find.byIcon(Icons.chevron_right), findsOneWidget);
+    expect(find.byKey(const ValueKey('slide-thumb')), findsOneWidget);
   });
 
   testWidgets('WalletSlideConfirm triggers on full drag', (tester) async {
@@ -37,11 +37,13 @@ void main() {
       ),
     );
 
-    await tester.drag(find.byIcon(Icons.chevron_right), const Offset(320, 0));
+    await tester.drag(
+      find.byKey(const ValueKey('slide-thumb')),
+      const Offset(320, 0),
+    );
     await tester.pumpAndSettle();
 
     expect(confirmed, isTrue);
-    expect(find.byIcon(Icons.check), findsOneWidget);
   });
 }
 

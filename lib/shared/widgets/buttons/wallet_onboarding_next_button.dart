@@ -1,4 +1,6 @@
+import 'package:figma_009/core/constants/wallet_assets.dart';
 import 'package:figma_009/core/theme/app_colors.dart';
+import 'package:figma_009/shared/widgets/other/wallet_asset_icon.dart';
 import 'package:flutter/material.dart';
 
 /// Figma Onboarding frame — 88px circular next control (back icon mirrored).
@@ -34,10 +36,13 @@ class WalletOnboardingNextButton extends StatelessWidget {
                   shape: BoxShape.circle,
                   border: Border.all(color: AppColors.black, width: 2),
                 ),
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: AppColors.black,
-                  size: 32,
+                child: Transform.rotate(
+                  angle: 3.14159,
+                  child: const WalletAssetIcon(
+                    WalletAssets.iconBack,
+                    size: 32,
+                    color: AppColors.black,
+                  ),
                 ),
               ),
             ),
