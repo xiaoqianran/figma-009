@@ -2,36 +2,83 @@
 
 ## Commands
 
+Run from project root (`flutter_009`):
+
 ```bash
-flutter analyze
-flutter test
 dart format lib test
+flutter analyze          # must report: No issues found!
+flutter test             # 36 tests
+flutter test test/features/wallet/wallet_screen_test.dart   # single file
 ```
 
-Run from project root (`flutter_009` or active worktree).
+## Test harness setup
+
+Every test file should initialize bindings and disable Google Fonts network I/O:
+
+```dart
+void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  GoogleFonts.config.allowRuntimeFetching = false;
+  // ...
+}
+```
+
+Web production enables runtime fetching in `lib/main.dart` (`kIsWeb` only).
+
+## Inventory (36 tests / 15 files)
+
+| File | Tests | Focus |
+|------|-------|-------|
+| `test/widget_test.dart` | 1 | App boots, splash gradient title |
+| `test/app_shell_navigation_test.dart` | 2 | Shell `router.go` + tab tap navigation |
+| `test/core/theme/app_colors_test.dart` | 2 | Gradient / color tokens |
+| `test/shared/widgets/buttons/wallet_buttons_test.dart` | 3 | Primary, secondary, circle buttons |
+| `test/shared/widgets/buttons/wallet_slide_confirm_test.dart` | 2 | Label, full drag confirm |
+| `test/shared/widgets/bars/wallet_bars_test.dart` | 2 | Tab bar tap, nav bar title |
+| `test/shared/widgets/other/wallet_trend_icon_test.dart` | 1 | Up/down trend icons |
+| `test/features/onboarding/splash_screen_test.dart` | 1 | Auto-navigate after delay |
+| `test/features/onboarding/onboarding_screen_test.dart` | 1 | Welcome title |
+| `test/features/onboarding/seed_phrase_screen_test.dart` | 1 | 12 mnemonic chips |
+| `test/features/onboarding/recovery_screen_test.dart` | 1 | Inputs + actions |
+| `test/features/wallet/wallet_screen_test.dart` | 2 | Balance list, scroll navigation |
+| `test/features/wallet/wallet_subflows_test.dart` | 3 | Detail, scroll, scan |
+| `test/features/transaction/transaction_screens_test.dart` | 3 | Send list, send detail, buy |
+| `test/features/layer7/layer7_screens_test.dart` | 4 | Swap, notification, settings, add token |
 
 ## Conventions
 
-- Widget tests live in `test/`.
-- Disable Google Fonts network in tests:
+### Routing in tests
+
+Prefer an isolated `GoRouter` with only the routes under test, or `createAppRouter()` from `app_router.dart` for integration-style shell tests:
 
 ```dart
-TestWidgetsFlutterBinding.ensureInitialized();
-GoogleFonts.config.allowRuntimeFetching = false;
+final router = createAppRouter();
+await tester.pumpWidget(
+  MaterialApp.router(theme: AppTheme.dark(), routerConfig: router),
+);
+router.go(AppRoutes.wallet);
+await tester.pumpAndSettle();
 ```
 
-## Per-layer checks
+### Finding widgets after Figma asset migration
 
-| Layer | Analyze | Test focus |
-|---|---|---|
-| Theme | `flutter analyze` | Token values, ThemeExtension lerp |
-| Buttons | `flutter analyze` | Tap callbacks, disabled state |
-| Bars | `flutter analyze` | Tab selection, label rendering |
-| Screens | `flutter analyze` | Key text/widgets from Figma frame |
+- **Do not** rely on `Icons.*` in `lib/` — there are none.
+- Use `ValueKey`s where defined (`nav-back`, `tab-Swap`, `slide-thumb`, `scan-icon`).
+- Use `find.text` / `find.byType` for screen-specific widgets.
+- Image assets: `find.byType(WalletCoinIcon)` or keys on parent widgets.
 
-## Before merge
+### Common pitfalls
+
+| Pitfall | Fix |
+|---------|-----|
+| `No GoRouter found in context` | Get router via `createAppRouter()` reference, not `GoRouter.of` on wrong widget |
+| `WalletBottomTabBar` missing on splash/onboarding | Navigate to `/wallet` before asserting shell |
+| `Transform` count assertions | MaterialApp adds extra transforms — assert your widget type only |
+| `num` vs `double` in `clamp()` | Use `.toDouble()` on clamp result in `WalletSlideConfirm` |
+
+## Before commit / push
 
 1. `dart format lib test`
 2. `flutter analyze` — zero issues
 3. `flutter test` — all green
-4. Merge task branch → `master`
+4. Do not commit `.dart_tool/`, `build/`, `.idea/`, `.metadata`
