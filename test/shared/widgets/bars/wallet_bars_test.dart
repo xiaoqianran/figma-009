@@ -3,11 +3,9 @@ import 'package:figma_009/shared/widgets/bars/wallet_bottom_tab_bar.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   Widget wrap(Widget child) {
     return MaterialApp(

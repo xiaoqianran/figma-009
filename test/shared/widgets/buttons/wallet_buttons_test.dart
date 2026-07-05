@@ -4,11 +4,9 @@ import 'package:figma_009/shared/widgets/buttons/wallet_primary_button.dart';
 import 'package:figma_009/shared/widgets/buttons/wallet_secondary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   Widget wrap(Widget child) {
     return MaterialApp(

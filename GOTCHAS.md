@@ -26,13 +26,12 @@ Or: `flutter run -d web-server --web-port=8765`
 
 | Font | Status |
 |------|--------|
-| **Poppins** | Loaded via `google_fonts`; works on Web when `main.dart` sets `allowRuntimeFetching = true` |
 | **Clash Display** | Bundled in `assets/fonts/` (Medium 500, Semibold 600) — [Fontshare FFL](https://www.fontshare.com/fonts/clash-display) |
-| **Poppins** | `fontFamily: 'Poppins'` in theme; loaded via `google_fonts` at runtime on Web (`main.dart`) |
+| **Poppins** | Bundled in `assets/fonts/Poppins-Medium.ttf` (weight 500) — [Google OFL](https://fonts.google.com/specimen/Poppins) |
 
-**Tests:** Always `GoogleFonts.config.allowRuntimeFetching = false` in `test/`.
+License files: `assets/fonts/ClashDisplay-FFL.txt`, `assets/fonts/Poppins-OFL.txt`. Do not remove when redistributing fonts.
 
-License file: `assets/fonts/ClashDisplay-FFL.txt`. Do not remove when redistributing fonts.
+Both fonts are embedded — **no runtime network fetch** required for Web builds.
 
 ## Icons & assets
 

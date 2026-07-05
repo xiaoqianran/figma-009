@@ -1,11 +1,9 @@
 import 'package:figma_009/shared/widgets/buttons/wallet_passcode_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   testWidgets('WalletPasscodeKeypad renders digit keys', (tester) async {
     await tester.pumpWidget(

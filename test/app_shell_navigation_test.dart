@@ -4,11 +4,9 @@ import 'package:figma_009/core/theme/app_theme.dart';
 import 'package:figma_009/shared/widgets/bars/wallet_bottom_tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   testWidgets('Main shell switches bottom tabs', (tester) async {
     final router = createAppRouter();

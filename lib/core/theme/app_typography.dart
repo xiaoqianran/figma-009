@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Typography from Figma: Clash Display (bundled) + Poppins (Google Fonts at runtime).
+/// Typography from Figma: Clash Display + Poppins (both bundled in assets/fonts).
 abstract final class AppTypography {
   static const String clashDisplayFamily = 'Clash Display';
   static const String poppinsFamily = 'Poppins';

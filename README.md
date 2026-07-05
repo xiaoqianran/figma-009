@@ -6,8 +6,8 @@ Flutter implementation of the **Wallet** Figma design (375×812 mobile). All Des
 |---|---|
 | **Figma file** | Wallet — pages: Design, Typography, Symbols |
 | **Remote** | https://github.com/xiaoqianran/figma-009.git |
-| **Flutter** | SDK ^3.12.2 · `go_router` ^17 · `google_fonts` ^8 |
-| **Status** | Layers 0–13 complete · 41 widget tests · `flutter analyze` clean |
+| **Flutter** | SDK ^3.12.2 · `go_router` ^17 |
+| **Status** | Layers 0–14 complete · 41 widget tests · `flutter analyze` clean |
 
 ## Quick start
 

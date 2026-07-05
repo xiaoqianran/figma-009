@@ -6,7 +6,7 @@ Feature-based MVVM Flutter app mapped from the **Wallet** Figma file (375×812).
 
 ```
 lib/
-├── main.dart                 # Web: enable GoogleFonts runtime fetch
+├── main.dart                 # runApp entry
 ├── app.dart                  # MaterialApp.router + AppTheme.dark()
 ├── core/
 │   ├── constants/
@@ -139,7 +139,7 @@ All paths centralized in `WalletAssets`. Export new icons with Figma MCP `save_s
 ## Theme
 
 - **Colors:** `AppColors` — Figma paint styles (gradients as `LinearGradient` / `RadialGradient`).
-- **Typography:** Clash Display (titles) → **Space Grotesk** fallback via Google Fonts; Poppins (body) via `google_fonts`.
+- **Typography:** Clash Display (titles) + Poppins (body) — both bundled in `assets/fonts/`.
 - **Spacing:** `DesignConstants` — 4/8/16/20/24/32, tab bar 96px, nav bar 56px.
 - **Extension:** `WalletThemeExtension` for wallet-specific tokens.
 
@@ -157,4 +157,4 @@ Node IDs use **colon** format (`0:68`), not hyphen.
 
 - Widget tests per screen / shared component (see [TESTING.md](TESTING.md)).
 - Shell navigation: `createAppRouter()` + `router.go` + tab `ValueKey`s.
-- Google Fonts network disabled in tests.
+- Fonts are bundled; tests need no special font/network setup.

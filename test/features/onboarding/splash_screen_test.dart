@@ -4,11 +4,9 @@ import 'package:figma_009/shared/widgets/other/gradient_title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   testWidgets('SplashScreen navigates to onboarding after delay', (
     tester,

@@ -4,11 +4,9 @@ import 'package:figma_009/shared/widgets/other/seed_phrase_chip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   testWidgets('SeedPhraseScreen renders 12 mnemonic chips', (tester) async {
     final router = GoRouter(

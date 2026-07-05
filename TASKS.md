@@ -124,3 +124,9 @@
 - [x] `WalletSwitchToggle` + Price Alerts 开关
 - [x] `flutter build web` 验证通过
 - [x] 字体与 Passcode 组件测试（41 tests）
+
+## Layer 14 — Offline fonts (`task/017-poppins`) ✅
+
+- [x] 内嵌 Poppins Medium（Google OFL）
+- [x] 移除 `google_fonts` 依赖与 Web 运行时拉取
+- [x] 清理测试中的 `GoogleFonts.config` 样板代码

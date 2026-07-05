@@ -6,11 +6,9 @@ import 'package:figma_009/shared/widgets/cells/wallet_token_cell.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
 
   testWidgets('DetailScreen renders token title and history', (tester) async {
     final router = GoRouter(

@@ -13,17 +13,7 @@ flutter test test/features/wallet/wallet_screen_test.dart   # single file
 
 ## Test harness setup
 
-Every test file should initialize bindings and disable Google Fonts network I/O:
-
-```dart
-void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  GoogleFonts.config.allowRuntimeFetching = false;
-  // ...
-}
-```
-
-Web production enables runtime fetching in `lib/main.dart` (`kIsWeb` only).
+Widget tests call `TestWidgetsFlutterBinding.ensureInitialized()` in `main()`. Fonts (Clash Display + Poppins) are bundled — no network I/O setup required.
 
 ## Inventory (41 tests / 17 files)
 
