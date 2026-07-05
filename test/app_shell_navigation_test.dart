@@ -41,4 +41,34 @@ void main() {
 
     expect(find.text('Settings'), findsOneWidget);
   });
+
+  testWidgets('Main shell bottom tab bar switches tabs by tap', (tester) async {
+    final router = createAppRouter();
+
+    await tester.pumpWidget(
+      MaterialApp.router(
+        theme: AppTheme.dark(),
+        routerConfig: router,
+      ),
+    );
+
+    router.go(AppRoutes.wallet);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.swap_horiz));
+    await tester.pumpAndSettle();
+    expect(find.text('You Send'), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.notifications_outlined));
+    await tester.pumpAndSettle();
+    expect(find.text('Notification'), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.settings_outlined));
+    await tester.pumpAndSettle();
+    expect(find.text('Settings'), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.account_balance_wallet_outlined));
+    await tester.pumpAndSettle();
+    expect(find.text('My Wallet'), findsOneWidget);
+  });
 }
