@@ -64,8 +64,40 @@ abstract final class MockWalletTokens {
       isUp: true,
       iconColor: Color(0xFFB0C7FF),
     ),
+    WalletToken(
+      id: 'wav',
+      name: 'Wave',
+      symbol: 'WAV',
+      amount: '4015 WAV',
+      fiatValue: '\$ 220.00',
+      changePercent: '-2.66%',
+      isUp: false,
+      iconColor: Color(0xFFB0C7FF),
+    ),
   ];
 
   static const String walletLabel = 'Wallet Etherium';
   static const String totalBalance = '\$ 24,306';
+
+  static WalletToken? byId(String id) {
+    for (final token in items) {
+      if (token.id == id) {
+        return token;
+      }
+    }
+    return null;
+  }
+
+  static String detailBalanceLabel(WalletToken token) => 'Wallet ${token.name}';
+
+  static String detailBalanceValue(WalletToken token) {
+    return switch (token.id) {
+      'btc' => r'$ 15,950',
+      'eth' => r'$ 5,260',
+      'pec' => r'$ 320',
+      'dah' => r'$ 1,540',
+      'wav' => r'$ 220',
+      _ => r'$ 4,950',
+    };
+  }
 }

@@ -81,6 +81,9 @@
 - [x] Add Token / Search / Custom Token
 - [x] Widget tests
 
-## Layer 8 — Upcoming
-- Wallet Detail / Scan / Scroll
-- Remaining placeholder screens
+## Layer 8 — Wallet sub-flows (`task/011-wallet-sub`) ✅
+
+- [x] Detail 代币详情 + 交易历史
+- [x] Wallet Scroll 扩展列表（含 Wave）
+- [x] Scan 扫码页
+- [x] Widget tests
