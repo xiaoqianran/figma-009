@@ -31,11 +31,11 @@ python -m http.server 8765
 
 ### GitHub Pages (production)
 
-Push to `master` triggers [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
+Push to `master` triggers [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) (build → `gh-pages` branch).
 
 **Live URL:** https://xiaoqianran.github.io/figma-009/
 
-Repo **Settings → Pages → Build and deployment → Source:** GitHub Actions (first-time setup).
+Repo **Settings → Pages → Source:** Deploy from branch `gh-pages` / `/` (root).
 
 Or use the web dev server:
 
