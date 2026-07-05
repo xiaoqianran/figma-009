@@ -73,7 +73,14 @@
 - [x] TransactionAmountPanel + market/receive widgets
 - [x] Widget tests
 
-## Layer 7 — Upcoming
-- Transaction flows (Swap)
-- Token management
-- Settings + Notification
+## Layer 7 — Tabs & flows (`task/010-tabs`) ✅
+
+- [x] Swap 主 Tab 页面
+- [x] Notification 主 Tab 页面
+- [x] Settings 主 Tab + Security/Wallet/Price Alerts 子流程
+- [x] Add Token / Search / Custom Token
+- [x] Widget tests
+
+## Layer 8 — Upcoming
+- Wallet Detail / Scan / Scroll
+- Remaining placeholder screens
